@@ -137,10 +137,20 @@ export function watchTooltip(
           x += table.offsetLeft + host.parentElement.offsetLeft
           y += table.offsetTop  + host.parentElement.offsetTop
         }
+        // Fix horizontal offset of tooltip for repository links
+        const repo = host.querySelector(".md-source__repository") as HTMLElement | null
+        const xCenter = (() => {
+          if (repo) {
+            const rOff = getElementOffset(repo)
+            const rSize = getElementSize(repo)
+            return rOff.x - scroll.x + rSize.width / 2 - width / 2
+          }
+          return x - scroll.x + size.width / 2 - width / 2
+        })()
         return {
           active,
           offset: {
-            x: x - scroll.x + size.width  / 2 - width / 2,
+            x: xCenter + 20,
             y: y - scroll.y + size.height + 8
           }
         }
