@@ -47,10 +47,13 @@
   &__list {
     display: flex;
     flex-direction: column;
-    gap: px2rem(2.5px);
     padding: 0;
     margin: 0;
     list-style: none;
+
+    > li + li {
+      margin-block-start: px2rem(2.5px);
+    }
 
     // Adjust spacing for level 2+
     & & {
@@ -71,17 +74,28 @@
         height: 0;
         content: " ";
       }
+
+      &::before {
+        margin-block-end: px2rem(2.5px);
+      }
+
+      &::after {
+        margin-block-start: px2rem(2.5px);
+      }
     }
   }
 
   // Navigation link
   &__link {
     display: flex;
-    gap: px2rem(6px);
     align-items: flex-start;
     padding: px2rem(7px) px2rem(8px) px2rem(7px) px2rem(16px);
     margin-inline: px2rem(4px);
     cursor: pointer;
+
+    > * + * {
+      margin-inline-start: px2rem(8px);
+    }
     border-radius: px2rem(8px);
     transition:
       color            250ms,
@@ -242,9 +256,12 @@
 
   // Navigation container (for section index pages)
   &__container {
-    gap: px2rem(4px);
     padding: 0;
     background: transparent;
+
+    > * + * {
+      margin-inline-start: px2rem(4px);
+    }
 
     // Stretch first child
     > :first-child {
@@ -362,7 +379,6 @@
     // theme, as the navigation layout was greatly simplified
     .md-nav__title[for="__drawer"] {
       display: flex;
-      gap: px2rem(8px);
       align-items: center;
       padding: px2rem(16px);
       font-size: px2rem(16px);
@@ -371,6 +387,7 @@
 
       // Logo
       .md-logo {
+        margin-inline-end: px2rem(8px);
         width: px2rem(32px);
         height: px2rem(32px);
 
