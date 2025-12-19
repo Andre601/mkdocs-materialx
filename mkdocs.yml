@@ -97,6 +97,8 @@ plugins:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   # - minify:
   #     minify_html: true
+  
+  - glightbox
   - document-dates:
       type: timeago
       locale: en
