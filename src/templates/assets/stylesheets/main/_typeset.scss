@@ -166,7 +166,7 @@ kbd {
   // Text link
   a {
     color: var(--md-typeset-a-color);
-    // text-decoration: underline;
+    text-decoration: underline;
     word-break: break-word;
 
     // Also enable color transition on pseudo elements
@@ -284,12 +284,10 @@ kbd {
     color: var(--md-default-fg-color);
     word-break: break-word;
     vertical-align: text-top;
-    background-color: var(--md-typeset-kbd-color);
-    border-radius: px2rem(2px);
+    border-radius: px2rem(4px);
     box-shadow:
-      0 px2rem(2px)  0 px2rem(1px) var(--md-typeset-kbd-border-color),
-      0 px2rem(2px)  0             var(--md-typeset-kbd-border-color),
-      0 px2rem(-2px) px2rem(4px)   var(--md-typeset-kbd-accent-color) inset;
+      0 0 0 px2rem(1px) var(--md-typeset-kbd-border-color),
+      0 px2rem(3px) 0   var(--md-typeset-kbd-border-color);
   }
 
   // Text highlighting marker
