@@ -71,9 +71,9 @@
 
   // Default color shades
   --md-default-fg-color:               hsla(0, 0%, 0%, 0.87);
-  --md-default-fg-color--light:        hsla(0, 0%, 0%, 0.54);
+  --md-default-fg-color--light:        hsla(0, 0%, 0%, 0.55);
   --md-default-fg-color--lighter:      hsla(0, 0%, 0%, 0.32);
-  --md-default-fg-color--lightest:     hsla(0, 0%, 0%, 0.07);
+  --md-default-fg-color--lightest:     hsla(0, 0%, 0%, 0.05);
   --md-default-bg-color:               hsla(0, 0%, 100%, 1);
   --md-default-bg-color--light:        hsla(0, 0%, 100%, 0.7);
   --md-default-bg-color--lighter:      hsla(0, 0%, 100%, 0.3);
@@ -134,13 +134,6 @@
   --md-warning-fg-color:              hsla(0, 0%, 0%, 0.87);
   --md-warning-bg-color:              hsla(60, 100%, 80%, 1);
 
-  // Footer color shades
-  --md-footer-fg-color:                hsla(0, 0%, 100%, 1);
-  --md-footer-fg-color--light:         hsla(0, 0%, 100%, 0.7);
-  --md-footer-fg-color--lighter:       hsla(0, 0%, 100%, 0.45);
-  --md-footer-bg-color:                hsla(0, 0%, 0%, 0.87);
-  --md-footer-bg-color--dark:          hsla(0, 0%, 0%, 0.32);
-
   // Shadow depth 1
   --md-shadow-z1:
     0 #{px2rem(4px)} #{px2rem(10px)} hsla(0, 0%, 0%, 0.05),
@@ -155,4 +148,10 @@
   --md-shadow-z3:
     0 #{px2rem(4px)} #{px2rem(10px)} hsla(0, 0%, 0%, 0.2),
     0 0              #{px2rem(1px)}  hsla(0, 0%, 0%, 0.35);
+
+  // Search
+  --color-foreground: 0 0 0;
+  --color-background: 255 255 255;
+  --color-background-subtle: 240 240 240;
+  --color-backdrop: 255 255 255;
 }

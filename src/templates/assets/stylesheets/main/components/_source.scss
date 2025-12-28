@@ -93,6 +93,12 @@
     svg {
       margin-inline-start: px2rem(12px);
       margin-top: px2rem(12px);
+
+      // Adjust icon size
+      .md-header & {
+        height: px2rem(24px);
+        width: px2rem(24px);
+      }
     }
 
     // Adjust spacing if icon is present
@@ -126,7 +132,7 @@
 
     // Show after the data was loaded
     .md-source__repository--active & {
-      animation: facts 250ms ease-in;
+      animation: facts 0ms ease-in;
     }
   }
 
@@ -137,7 +143,7 @@
 
     // Show after the data was loaded
     .md-source__repository--active & {
-      animation: fact 400ms ease-out;
+      animation: fact 0ms ease-out;
     }
 
     // Repository fact icon

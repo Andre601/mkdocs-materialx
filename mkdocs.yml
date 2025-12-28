@@ -215,7 +215,7 @@ nav:
     - Changing the colors: setup/changing-the-colors.md
     - Changing the fonts: setup/changing-the-fonts.md
     - Changing the language: setup/changing-the-language.md
-    - Document dates & authors: setup/adding-document-dates-authors.md
+    - Document dates authors: setup/adding-document-dates-authors.md
     - Recent updates module: setup/adding-recent-updates-module.md
     - Adding a git repository: setup/adding-a-git-repository.md
     - Adding a comment system: setup/adding-a-comment-system.md
