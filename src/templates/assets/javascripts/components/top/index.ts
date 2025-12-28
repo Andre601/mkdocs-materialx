@@ -151,7 +151,7 @@ export function mountBackToTop(
 
     /* Handle complete */
     complete() {
-      el.style.top = ""
+      el.style.bottom = ""
       el.hidden = true
       el.removeAttribute("tabindex")
     }
@@ -164,7 +164,7 @@ export function mountBackToTop(
       distinctUntilKeyChanged("height")
     )
       .subscribe(({ height }) => {
-        el.style.top = `${height + 16}px`
+        el.style.bottom = `${height + 16}px`
       })
 
   /* Go back to top */

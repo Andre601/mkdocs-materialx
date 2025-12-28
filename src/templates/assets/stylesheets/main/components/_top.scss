@@ -27,7 +27,7 @@
 // Back-to-top button
 .md-top {
   position: fixed;
-  top: px2rem(48px + 16px);
+  bottom: px2rem(48px + 16px);
   z-index: 2;
   display: flex;
   gap: px2rem(8px);
