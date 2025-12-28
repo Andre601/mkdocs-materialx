@@ -60,7 +60,7 @@ so create a new folder in your working directory and a new virtual environment
 inside it. Next:
 
 1.  As mentioned in our [bug reporting guide], ensure that you're running the
-    latest version of Material for MkDocs, which might already include a fix for
+    latest version of MaterialX for MkDocs, which might already include a fix for
     the bug:
 
     ```
@@ -97,7 +97,7 @@ inside it. Next:
 
 ### Creating a `.zip` file
 
-Material for MkDocs 9.0.0 includes a new plugin solely intended to create
+MaterialX for MkDocs 9.0.0 includes a new plugin solely intended to create
 reproductions for bug reports. When the built-in info plugin is enabled, MkDocs
 will add all relevant files to a `.zip`, print a summary to the terminal and
 exit. Add the following lines to `mkdocs.yml`:

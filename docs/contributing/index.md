@@ -1,6 +1,6 @@
 # Contributing
 
-Material for MkDocs is an actively maintained and constantly evolving project
+MaterialX for MkDocs is an actively maintained and constantly evolving project
 serving a diverse user base with versatile backgrounds and needs. In order to
 efficiently address the requirements of all our users, evaluate change requests,
 and fix bugs, we put in a lot of work.
@@ -38,7 +38,7 @@ In this section, we guide your through our processes.
 
     ---
 
-    Report a bug in Material for MkDocs by creating an issue with a
+    Report a bug in MaterialX for MkDocs by creating an issue with a
     reproduction
 
     ---

@@ -170,13 +170,13 @@ will stretch to the full width of the viewport, e.g. on mobile viewports. If
 there's more space available, grids will render in items of 3 and more, e.g.
 when [hiding both sidebars].
 
-  [mkdocs-material]: https://pypistats.org/packages/mkdocs-material
+  [mkdocs-materialx]: https://pypistats.org/packages/mkdocs-materialx
   [pip]: ../getting-started.md#with-pip
   [getting started]: ../getting-started.md
   [reference]: ../reference/index.md
   [customization]: ../customization.md
   [license]: ../license.md
-  [GitHub]: https://github.com/squidfunk/mkdocs-material
+  [GitHub]: https://github.com/jaywhj/mkdocs-materialx
   [hiding both sidebars]: ../setup/setting-up-navigation.md#hiding-the-sidebars
 
 #### Block syntax

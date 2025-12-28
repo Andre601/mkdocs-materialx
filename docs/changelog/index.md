@@ -5,10 +5,13 @@
 ### 10.0.4 <small>December 19, 2025</small> { id="10.0.4" }
 
 - **New**: Show `git repo` in sidebar on mobile
+- **New**: Add a new generation date author plugin, see doc [Add document dates authors](https://jaywhj.github.io/mkdocs-materialx/setup/adding-document-dates-authors/)
+- **New**: Add recent updates module, see doc [Add recent updates module](https://jaywhj.github.io/mkdocs-materialx/setup/adding-recent-updates-module/)
 - **Fixed**: Language selector escapes viewport when too wide on mobile
 - **Fixed**: Replace gap to increase compatibility
 - **Fixed**: Adjust the style for kbd styles
 - **Fixed**: Adjust the border-radius of all styles
+- **Fixed**: Merge the upstream 9.7.1 update
 - **Fixed**: Update Doc Site, see [MaterialX](https://jaywhj.github.io/mkdocs-materialx/)
 
 ### 10.0.3 <small>December 11, 2025</small> { id="10.0.3" }

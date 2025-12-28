@@ -1,6 +1,6 @@
 # Bug reports
 
-Material for MkDocs is an actively maintained project that we constantly strive
+MaterialX for MkDocs is an actively maintained project that we constantly strive
 to improve. With a project of this size and complexity, bugs may occur. If you
 think you have discovered a bug, you can help us by submitting an issue in our
 public [issue tracker], following this guide.
@@ -20,13 +20,13 @@ __But first, please do the following things before creating an issue.__
 
 Chances are that the bug you discovered was already fixed in a subsequent
 version. Thus, before reporting an issue, ensure that you're running the
-[latest version] of Material for MkDocs. Please consult our [upgrade guide] to
+[latest version] of MaterialX for MkDocs. Please consult our [upgrade guide] to
 learn how to upgrade to the latest version.
 
 !!! warning "Bug fixes are not backported"
 
     Please understand that only bugs that occur in the latest version of
-    Material for MkDocs will be addressed. Also, to reduce duplicate efforts,
+    MaterialX for MkDocs will be addressed. Also, to reduce duplicate efforts,
     fixes cannot be backported to earlier versions.
 
 ### Remove customizations
@@ -48,7 +48,7 @@ adjusted all partials you have overridden.
 
 !!! warning "Customizations mentioned in our documentation"
 
-    A handful of the features Material for MkDocs offers can only be implemented
+    A handful of the features MaterialX for MkDocs offers can only be implemented
     with customizations. If you find a bug in any of the customizations [that
     our documentation explicitly mentions], you are, of course, encouraged to
     report it.
@@ -158,7 +158,7 @@ can be inferred from the title.
 
 Before describing the bug, you can provide additional context for us to
 understand what you were trying to achieve. Explain the circumstances
-in which you're using Material for MkDocs, and what you _think_ might be
+in which you're using MaterialX for MkDocs, and what you _think_ might be
 relevant. Don't write about the bug here.
 
 > __Why this might be helpful__: some errors only manifest in specific settings,
@@ -169,7 +169,7 @@ relevant. Don't write about the bug here.
 
 Now, to the bug you want to report. Provide a clear, focused, specific, and
 concise summary of the bug you encountered. Explain why you think this is a bug
-that should be reported to Material for MkDocs, and not to one of its
+that should be reported to MaterialX for MkDocs, and not to one of its
 dependencies.[^3] Adhere to the following principles:
 
   [^3]:
@@ -178,7 +178,7 @@ dependencies.[^3] Adhere to the following principles:
     [Python Markdown Extensions] or third-party plugins. A good rule of thumb is
     to change the [`theme.name`][theme.name] to `mkdocs` or `readthedocs` and
     check if the problem persists. If it does, the problem is likely not
-    related to Material for MkDocs and should be reported upstream. When in
+    related to MaterialX for MkDocs and should be reported upstream. When in
     doubt, use our [discussion board] to ask for help.
 
 -   __Explain the <u>what</u>, not the <u>how</u>__ – don't explain
@@ -260,7 +260,7 @@ will automatically upload it to GitHub.
     produced by the [built-in info plugin] contains all of the necessary
     environment information that is often forgotten to be included.
 
-    Additionally, there are many non-technical users of Material for MkDocs that
+    Additionally, there are many non-technical users of MaterialX for MkDocs that
     have trouble creating repositories.
 
   [Create reproduction]: ../guides/creating-a-reproduction.md
@@ -300,8 +300,8 @@ the bug. If it's gone, it's caused by an extension.
 > version in which it occurs, but we might ask for it later. When in doubt, add
 > the browser version as the first step in the field above.
 
-  [previewing]: http://localhost:8000/mkdocs-material/creating-your-site/#previewing-as-you-write
-  [building]: http://localhost:8000/mkdocs-material/creating-your-site/#building-your-site
+  [previewing]: http://localhost:8000/mkdocs-materialx/creating-your-site/#previewing-as-you-write
+  [building]: http://localhost:8000/mkdocs-materialx/creating-your-site/#building-your-site
 
 ### Checklist
 

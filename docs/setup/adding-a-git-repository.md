@@ -1,6 +1,6 @@
 # Adding a git repository
 
-If your documentation is related to source code, Material for MkDocs provides
+If your documentation is related to source code, MaterialX for MkDocs provides
 the ability to display information to the project's repository as part of the
 static site, including stars and forks. Furthermore, the
 [date of last update and creation], as well as [contributors] can be shown.
@@ -17,7 +17,7 @@ documentation, set [`repo_url`][repo_url] in `mkdocs.yml` to the public URL of
 your repository, e.g.:
 
 ``` yaml
-repo_url: https://github.com/squidfunk/mkdocs-material
+repo_url: https://github.com/jaywhj/mkdocs-materialx
 ```
 
 The link to the repository will be rendered next to the search bar on big
@@ -52,7 +52,7 @@ _repository name_ automatically. If you wish to customize the name, set
 [`repo_name`][repo_name] in `mkdocs.yml`:
 
 ``` yaml
-repo_name: squidfunk/mkdocs-material
+repo_name: jaywhj/mkdocs-materialx
 ```
 
   [repo_name]: https://www.mkdocs.org/user-guide/configuration/#repo_name
@@ -158,100 +158,143 @@ theme:
   [MkDocs]: https://www.mkdocs.org
   [edit_uri]: https://www.mkdocs.org/user-guide/configuration/#edit_uri
 
-### Revisioning
+### Document dates & authors
 
-The following plugins are fully integrated with Material for MkDocs, allowing
-for showing the [date of last update and creation] of a document, as well as
-links to all [contributors] or [authors] involved.
-
-  [date of last update and creation]: #document-dates
+  [date of last update and creation]: #document-dates-authors
   [contributors]: #document-contributors
-  [authors]: #document-authors
 
-#### Document dates
+<!-- md:version 10.0.4 -->
+<!-- md:plugin [document-dates] -->
 
-<!-- md:version 4.6.0 -->
-<!-- md:plugin [git-revision-date-localized] -->
+You can add date and author information to your documents via the next-generation Date & Author plugin [document-dates].
 
-The [git-revision-date-localized] plugin adds support for adding the date of
-last update and creation of a document at the bottom of each page. Install it
-with `pip`:
+![render](../assets/screenshots/document-dates.gif)
+
+#### Installation
+
+Install it with `pip`:
 
 ```
-pip install mkdocs-git-revision-date-localized-plugin
+pip install mkdocs-document-dates
 ```
 
 Then, add the following lines to `mkdocs.yml`:
 
 ``` yaml
 plugins:
-  - git-revision-date-localized:
-      enable_creation_date: true
+  - document-dates
 ```
+
+#### Configuration
 
 The following configuration options are supported:
 
-<!-- md:option git-revision-date-localized.enabled -->
+<!-- md:option document-dates.position -->
 
-:   <!-- md:default `true` --> This option specifies whether
-    the plugin is enabled when building your project. If you want to switch
-    the plugin off, e.g. for local builds, use an [environment variable]:
+:   <!-- md:default `top` --> This option specifies the display position of the plugin. 
+    Valid values are `top`, `bottom`:
 
     ``` yaml
     plugins:
-      - git-revision-date-localized:
-          enabled: !ENV [CI, false]
+      - document-dates:
+          position: top
     ```
 
-<!-- md:option git-revision-date-localized.type -->
+<!-- md:option document-dates.type -->
 
-:   <!-- md:default `date` --> The format of the date to be
-    displayed. Valid values are `date`, `datetime`, `iso_date`, `iso_datetime`
-    and `timeago`:
+:   <!-- md:default `date` --> This option specifies the type of date to be displayed.
+    Valid values are `date`, `datetime`, `timeago`:
 
     ``` yaml
     plugins:
-      - git-revision-date-localized:
+      - document-dates:
           type: date
     ```
 
-<!-- md:option git-revision-date-localized.enable_creation_date -->
+<!-- md:option document-dates.exclude -->
 
-:   <!-- md:default `false` --> Enables the display of the
-    creation date of the file associated with the page next to the last updated
-    date at the bottom of the page:
+:   <!-- md:default `[]` --> This option specifies a list of excluded files:
 
     ``` yaml
     plugins:
-      - git-revision-date-localized:
-          enable_creation_date: true
+      - document-dates:
+          exclude:
+            - temp.md   # Example: exclude the specified file
+            - blog/*    # Example: exclude all files in blog folder, including subfolders
     ```
 
-    !!! note "When using build environments"
+<!-- md:option document-dates.date_format -->
+
+:   <!-- md:default `%Y-%m-%d` --> This option specifies the date formatting string:
+
+    ``` yaml
+    plugins:
+      - document-dates:
+          date_format: '%Y-%m-%d'   # e.g., %Y-%m-%d, %b %d, %Y
+          time_format: '%H:%M:%S'   # valid only if type=datetime
+    ```
+  
+  <!-- md:option document-dates.show_created -->
+
+:   <!-- md:default `true` --> This option specifies whether to display the creation date.
+    Valid values are `true`, `false`:
+
+    ``` yaml
+    plugins:
+      - document-dates:
+          show_created: true
+    ```
+
+    ??? note "When using build environments"
 
         If you are deploying through a CI system, you might need to adjust your
-        CI settings when fetching the code. For more information, see
-        [git-revision-date-localized].
+        CI settings when fetching the code:
 
-<!-- md:option git-revision-date-localized.fallback_to_build_date -->
+        - Github Actions: set `fetch-depth` to `0` ([docs](https://github.com/actions/checkout))
+        - Gitlab Runners: set `GIT_DEPTH` to `0` ([docs](https://docs.gitlab.com/ee/ci/pipelines/settings.html#limit-the-number-of-changes-fetched-during-clone))
+        - Bitbucket pipelines: set `clone: depth: full` ([docs](https://support.atlassian.com/bitbucket-cloud/docs/configure-bitbucket-pipelinesyml/))
+        - Azure Devops pipelines: set `Agent.Source.Git.ShallowFetchDepth` to something very high like `10e99` ([docs](https://docs.microsoft.com/en-us/azure/devops/pipelines/repos/pipeline-options-for-git?view=azure-devops#shallow-fetch))
 
-:   <!-- md:default `false` --> Enables falling back to
-    the time when `mkdocs build` was executed. Can be used as a fallback when
-    the build is performed outside of a git repository:
+<!-- md:option document-dates.show_updated -->
+
+:   <!-- md:default `true` --> This option specifies whether to display the last updated date.
+    Valid values are `true`, `false`:
 
     ``` yaml
     plugins:
-      - git-revision-date-localized:
-          fallback_to_build_date: true
+      - document-dates:
+          show_updated: true
     ```
 
-The other configuration options of this extension are not officially supported
-by Material for MkDocs, which is why they may yield unexpected results. Use
-them at your own risk.
+<!-- md:option document-dates.show_author -->
 
-  [git-revision-date-localized]: https://github.com/timvink/mkdocs-git-revision-date-localized-plugin
+:   <!-- md:default `true` --> This option specifies the type of author display.
+    Valid values are `true`(avatar), `false`(hidden), `text`(text):
 
-#### Document contributors
+    ``` yaml
+    plugins:
+      - document-dates:
+          show_author: true   # true(avatar) text(text) false(hidden)
+    ```
+
+  [document-dates]: https://github.com/jaywhj/mkdocs-document-dates
+
+#### Customization settings
+
+In addition to the above basic configuration, the plug-in also provides a wealth of customization options to meet a variety of individual needs:
+
+- [Specify datetime](adding-document-dates-authors.md#specify-datetime): introduces the mechanism for obtaining document dates and methods for personalized customization, you can manually specify the creation date and last updated date for each document
+- [Specify author](adding-document-dates-authors.md#specify-author): introduces the mechanism for obtaining document authors and methods for personalized customization, you can manually specify the author information for each document, such as name, link, avatar, email, etc.
+- [Specify avatar](adding-document-dates-authors.md#specify-avatar): you can manually specify the avatar for each author, support local file path and URL path
+- [Configuration structure and style](adding-document-dates-authors.md#structure-and-style): you can freely configure the plugin's display structure in mkdocs.yml or Front Matter. You can quickly set the plugin styles through preset entrances, such as icons, themes, colors, fonts, animations, dividing line and so on
+- [Use template variables](adding-document-dates-authors.md#use-template-variables): can be used to optimize `sitemap.xml` for site SEO; can be used to re-customize plug-ins, etc.
+- [Add recent updates module](adding-document-dates-authors.md#add-recent-updates-module): enable list of recently updated documents (in descending order of update date), this is ideal for sites with a large number of documents, so that readers can quickly see what's new
+- [Add localized languages](adding-document-dates-authors.md#add-localized-languages): more localization languages for `timeago` and `tooltip`
+- [Other tips](adding-document-dates-authors.md#other-tips): introducing the Do's of using plugin in Docker
+
+For more details: [Document dates & authors](adding-document-dates-authors.md)
+
+### Document contributors
 
 <!-- md:version 9.5.0 -->
 <!-- md:plugin [git-committers] -->
@@ -276,7 +319,7 @@ Then, add the following lines to `mkdocs.yml`:
 ``` yaml
 plugins:
   - git-committers:
-      repository: squidfunk/mkdocs-material
+      repository: jaywhj/mkdocs-materialx
       branch: main
 ```
 
@@ -303,7 +346,7 @@ The following configuration options are supported:
     ``` yaml
     plugins:
       - git-committers:
-          repository: squidfunk/mkdocs-material
+          repository: jaywhj/mkdocs-materialx
     ```
 
 <!-- md:option git-committers.branch -->
@@ -318,37 +361,8 @@ The following configuration options are supported:
     ```
 
 The other configuration options of this extension are not officially supported
-by Material for MkDocs, which is why they may yield unexpected results. Use
+by MaterialX for MkDocs, which is why they may yield unexpected results. Use
 them at your own risk.
 
   [git-committers]: https://github.com/ojacques/mkdocs-git-committers-plugin-2
   [environment variable]: https://www.mkdocs.org/user-guide/configuration/#environment-variables
-  [rate limits]: https://docs.github.com/en/rest/overview/resources-in-the-rest-api#rate-limiting
-
-#### Document authors
-
-<!-- md:version 9.5.0 -->
-<!-- md:plugin [git-authors] -->
-<!-- md:flag experimental -->
-
-The [git-authors] plugin is a lightweight alternative to the
-[git-committers] plugin and extracts the authors of a document from git to display
-them at the bottom of each page.
-
-Material for MkDocs offers deep integration for [git-authors]. This means the
-[customized overrides](https://timvink.github.io/mkdocs-git-authors-plugin/usage.html#mkdocs-material-theme)
-are not necessary, and additional styling (such as nice icons) are added.
-Simply install it with `pip`:
-
-```
-pip install mkdocs-git-authors-plugin
-```
-
-Then, add the following lines to `mkdocs.yml`:
-
-``` yaml
-plugins:
-  - git-authors
-```
-
-  [git-authors]: https://github.com/timvink/mkdocs-git-authors-plugin/

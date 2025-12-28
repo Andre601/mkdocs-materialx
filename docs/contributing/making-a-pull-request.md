@@ -1,6 +1,6 @@
 # Pull Requests
 
-You can contribute to Material for MkDocs by making a [pull request] that
+You can contribute to MaterialX for MkDocs by making a [pull request] that
 will be reviewed by maintainers and integrated into the main repository when
 the changes made are approved. You can contribute bug fixes, changes to the
 documentation, or new functionality you have developed.
@@ -38,7 +38,7 @@ following articles are of particular importance:
 
 Note that they provide tailored documentation for different operating systems
 and different ways of interacting with GitHub. We do our best in the
-documentation here to describe the process as it applies to Material for MkDocs
+documentation here to describe the process as it applies to MaterialX for MkDocs
 but cannot cover all possible combinations of tools and ways of doing things.
 It is also important that you understand the concept of a pull-request in
 general before continuing.
@@ -64,12 +64,12 @@ providing instructions below.
 sequenceDiagram
   autonumber
 
-  participant mkdocs-material
+  participant mkdocs-materialx
   participant PR
   participant fork
   participant local
 
-  mkdocs-material ->> fork: fork on GitHub
+  mkdocs-materialx ->> fork: fork on GitHub
   fork ->> local: clone to local
   local ->> local: branch
   loop prepare
@@ -79,13 +79,13 @@ sequenceDiagram
       end
       local ->> fork: push
     end
-    mkdocs-material ->> fork: merge in any changes
+    mkdocs-materialx ->> fork: merge in any changes
     fork ->>+ PR: create draft PR
     PR ->> PR: review your changes
   end
 ```
 
-1. The first step is that you create a fork of the Material for MkDocs
+1. The first step is that you create a fork of the MaterialX for MkDocs
    repository. This provides you with a repository that you can push changes to.
    Note that it is not possible to have more than one fork of a given repository
    at any point in time. So, the fork you create will be *the* fork you have.
@@ -116,7 +116,7 @@ sequenceDiagram
 
 5. Push your work up to your fork regularly.
 
-6. You should also keep an eye on changes in the Material for MkDocs repository
+6. You should also keep an eye on changes in the MaterialX for MkDocs repository
    you cloned. This is especially important if you work takes a while. Please
    try and merge any concurrent changes into your fork and into your branch
    regularly. You *must* do this at least once before creating a pull request,
@@ -138,7 +138,7 @@ sequenceDiagram
 
     You should choose a number of projects to test your changes with. You should
     definitely make sure that the changes do not break the building of the
-    documentation for Material for MkDocs, which you can find in the `docs`
+    documentation for MaterialX for MkDocs, which you can find in the `docs`
     folder. You may also want to make sure that relevant examples from the
     [examples repository] still build fine.
 
@@ -153,7 +153,7 @@ below shows the process:
 ``` mermaid
 sequenceDiagram
   autonumber
-  participant mkdocs-material
+  participant mkdocs-materialx
   participant PR
   participant fork
   participant local
@@ -166,10 +166,10 @@ sequenceDiagram
       PR ->> PR: discussion
       local ->> fork: push further changes
     end
-    PR ->> mkdocs-material: merge (and squash)
+    PR ->> mkdocs-materialx: merge (and squash)
     deactivate PR
     fork ->> fork: delete branch
-    mkdocs-material ->> fork: pull
+    mkdocs-materialx ->> fork: pull
     local ->> local: delete branch
     fork ->> local: pull
   end
@@ -234,7 +234,7 @@ reasonable level.
 
 ### Forking the repository
 
-To make changes to Material for MkDocs, you would first fork one of its
+To make changes to MaterialX for MkDocs, you would first fork one of its
 repositories on GitHub. This is so that you have a repository on GitHub that
 you can push changes to (only maintainers and collaborators have write access
 to the original repositories).
@@ -245,7 +245,7 @@ that people who come across it know that they have found a temporary fork rather
 than the original or a permanent fork of the project. You may also want to add
 a description that clarifies what the repository is for.
 
-[repository]: https://github.com/squidfunk/mkdocs-material
+[repository]: https://github.com/jaywhj/mkdocs-materialx
 
 ### Setting up a development environment
 
@@ -284,21 +284,21 @@ will work against that branch in your fork by default.
 
 If the work you do takes some time then the chances increase that changes will
 be made to the main repository while you work. It is probably a good idea to set
-up the original Material for MkDocs repository as an `upstream` repository for
+up the original MaterialX for MkDocs repository as an `upstream` repository for
 your local clone.
 
 This is what it might look like:
 
 ```bash hl_lines="4"
 $ git remote -v
-origin	git@github.com:<your_username>/mkdocs-material-fork.git (fetch)
-origin	git@github.com:<your_username>/mkdocs-material-fork.git (push)
-$ git remote add upstream https://github.com/squidfunk/mkdocs-material.git
+origin	git@github.com:<your_username>/mkdocs-materialx-fork.git (fetch)
+origin	git@github.com:<your_username>/mkdocs-materialx-fork.git (push)
+$ git remote add upstream https://github.com/jaywhj/mkdocs-materialx.git
 $ git remote -v
-origin	git@github.com:alexvoss/mkdocs-material-fork.git (fetch)
-origin	git@github.com:alexvoss/mkdocs-material-fork.git (push)
-upstream	https://github.com/squidfunk/mkdocs-material.git (fetch)
-upstream	https://github.com/squidfunk/mkdocs-material.git (push)
+origin	git@github.com:alexvoss/mkdocs-materialx-fork.git (fetch)
+origin	git@github.com:alexvoss/mkdocs-materialx-fork.git (push)
+upstream	https://github.com/jaywhj/mkdocs-materialx.git (fetch)
+upstream	https://github.com/jaywhj/mkdocs-materialx.git (push)
 ```
 
 After you have done this, you can pull any concurrent changes from the upstream
@@ -320,7 +320,7 @@ Before you commit any changes, you should make sure that they work as expected
 and do not create any unintended side effects. You should test them on at least
 these three [smoke tests]:
 
-- The documentation of Material for MkDocs itself. If you set up and run the
+- The documentation of MaterialX for MkDocs itself. If you set up and run the
 development environment as outlined in the [instructions for setting up the
 development environment], `mkdocs serve` should be running and continuously
 building the documentation. Check that there are no error messages and, ideally,
@@ -332,12 +332,12 @@ a [minimal reproduction]. If you are working on a new feature then you may need
 to build a project to serve as a test suite. It can double as documentation that
 shows how your new feature is meant to work.
 
-- Test with relevant examples from the [Material for MkDocs Examples]
+- Test with relevant examples from the [MaterialX for MkDocs Examples]
   repository.
 
 [smoke tests]: https://en.wikipedia.org/wiki/Smoke_testing_(software)
 [minimal reproduction]: https://jaywhj.github.io/mkdocs-materialx/guides/creating-a-reproduction/
-[Material for MkDocs Examples]: https://github.com/mkdocs-material/examples
+[MaterialX for MkDocs Examples]: https://github.com/mkdocs-material/examples
 
 - Ideally, also test the examples in the [examples repository].
 
@@ -357,7 +357,7 @@ provide all the information that should be necessary.
 
 ### Deleting branches
 
-Once the pull request has been merged into the master branch of the Material
+Once the pull request has been merged into the master branch of the MaterialX
 for MkDocs repository, you should remove the branch both from the fork on
 GitHub and from the local clone on your computer. This avoids possible
 confusion about the state of development.
@@ -371,7 +371,7 @@ It is important that subsequent pull requests are started from an up-to-date
 history of the `master` branch. One way to achieve this is to delete the fork
 and start with an entirely new one next time round.
 
-If you contribute to Material for MkDocs more often or just happen to be
+If you contribute to MaterialX for MkDocs more often or just happen to be
 doing two or more pull requests in succession, you can also just make sure
 to sync your fork (using the GitHub UI) and pull from it into your local
 repository. So, just delete the topic branch you created (both locally and in
@@ -391,7 +391,7 @@ your fork) and pull from the main repository's `master` branch into your
 4. **Do** ask questions if you are uncertain about anything.
 
 5. **Do** ask yourself if what you are doing benefits the wider community and
-   makes Material for MkDocs a better product.
+   makes MaterialX for MkDocs a better product.
 
 6. **Do** ask yourself if the cost of making the changes stands in a good
    relation to the benefits they will bring. Some otherwise sensible changes can

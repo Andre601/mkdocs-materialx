@@ -211,11 +211,14 @@ nav:
       - How to upgrade: upgrade.md
   - Setup:
     - setup/index.md
+    - Changing the logo and icons: setup/changing-the-logo-and-icons.md
     - Changing the colors: setup/changing-the-colors.md
     - Changing the fonts: setup/changing-the-fonts.md
     - Changing the language: setup/changing-the-language.md
-    - Changing the logo and icons: setup/changing-the-logo-and-icons.md
-    - Ensuring data privacy: setup/ensuring-data-privacy.md
+    - Document dates & authors: setup/adding-document-dates-authors.md
+    - Recent updates module: setup/adding-recent-updates-module.md
+    - Adding a git repository: setup/adding-a-git-repository.md
+    - Adding a comment system: setup/adding-a-comment-system.md
     - Setting up navigation: setup/setting-up-navigation.md
     - Setting up site search: setup/setting-up-site-search.md
     - Setting up site analytics: setup/setting-up-site-analytics.md
@@ -225,10 +228,9 @@ nav:
     - Setting up versioning: setup/setting-up-versioning.md
     - Setting up the header: setup/setting-up-the-header.md
     - Setting up the footer: setup/setting-up-the-footer.md
-    - Adding a git repository: setup/adding-a-git-repository.md
-    - Adding a comment system: setup/adding-a-comment-system.md
-    - Building an optimized site: setup/building-an-optimized-site.md
-    - Building for offline usage: setup/building-for-offline-usage.md
+    # - Ensuring data privacy: setup/ensuring-data-privacy.md
+    # - Building an optimized site: setup/building-an-optimized-site.md
+    # - Building for offline usage: setup/building-for-offline-usage.md
     - Extensions:
       - setup/extensions/index.md
       - Python Markdown: setup/extensions/python-markdown.md
@@ -242,11 +244,11 @@ nav:
     - Offline: plugins/offline.md
     - Optimize: plugins/optimize.md
     - Privacy: plugins/privacy.md
-    - Projects: plugins/projects.md
+    # - Projects: plugins/projects.md
     - Search: plugins/search.md
     - Social: plugins/social.md
     - Tags: plugins/tags.md
-    - Typeset: plugins/typeset.md
+    # - Typeset: plugins/typeset.md
     - Requirements:
       - Image processing: plugins/requirements/image-processing.md
       - Caching: plugins/requirements/caching.md
@@ -267,12 +269,12 @@ nav:
     - Lists: reference/lists.md
     - Math: reference/math.md
     - Tooltips: reference/tooltips.md
-  - Insiders:
-    - insiders/index.md
-    - Getting started: insiders/getting-started.md
-    - Changelog:
-      - insiders/changelog/index.md
-      - How to upgrade: insiders/upgrade.md
+  # - Insiders:
+  #   - insiders/index.md
+  #   - Getting started: insiders/getting-started.md
+  #   - Changelog:
+  #     - insiders/changelog/index.md
+  #     - How to upgrade: insiders/upgrade.md
   - Community:
     - Contributing:
       - contributing/index.md

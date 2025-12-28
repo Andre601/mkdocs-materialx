@@ -1,6 +1,6 @@
 # Change requests
 
-Material for MkDocs is a powerful tool for creating beautiful and functional
+MaterialX for MkDocs is a powerful tool for creating beautiful and functional
 documentation. With more than 20,000 users, we understand that our project
 serves a wide range of use cases, which is why we have created the following
 guide.
@@ -32,7 +32,7 @@ implementation.
 
 Before you invest your time to fill out and submit a change request, we kindly
 ask you to do some preliminary work by answering some questions to determine if
-your idea is a good fit for Material for MkDocs and matches the project's
+your idea is a good fit for MaterialX for MkDocs and matches the project's
 [philosophy] and tone.
 
 __Please do the following things before creating an issue.__
@@ -116,7 +116,7 @@ be inferred from the title.
 
 Before describing your idea, you can provide additional context for us to
 understand what you are trying to achieve. Explain the circumstances
-in which you're using Material for MkDocs, and what you _think_ might be
+in which you're using MaterialX for MkDocs, and what you _think_ might be
 relevant. Don't write about the change request here.
 
 > __Why this might be helpful__: some ideas might only benefit specific
@@ -127,7 +127,7 @@ relevant. Don't write about the change request here.
 ### Description
 
 Next, provide a detailed and clear description of your idea. Explain why your
-idea is relevant to Material for MkDocs and must be implemented here and not
+idea is relevant to MaterialX for MkDocs and must be implemented here and not
 in one of its dependencies:[^2]
 
   [^2]:
@@ -204,7 +204,7 @@ it and describing how it was implemented and incorporated.
 > or mockups can create an additional level of detail and clarity that text
 > alone may not be able to convey. Also, seeing how your idea has been
 > implemented in other projects can help us understand its potential impact and
-> feasibility in Material for MkDocs, which helps us maintainers evaluate and
+> feasibility in MaterialX for MkDocs, which helps us maintainers evaluate and
 > triage change requests.
 
 ### Checklist
@@ -212,7 +212,7 @@ it and describing how it was implemented and incorporated.
 Thanks for following the guide and creating a high-quality change request – you
 are almost done. The checklist ensures that you have read this guide and have
 worked to your best knowledge to provide us with every piece of information to
-review your idea for Material for MkDocs.
+review your idea for MaterialX for MkDocs.
 
 __We'll take it from here.__
 

@@ -13,7 +13,7 @@ setting up site search, and more.
 
 <div class="grid cards" markdown>
 
-- :fontawesome-solid-earth-americas: __[Language]__ – Choose out of the 60+ supported languages or add a new one
+- :simple-lastpass: __[Recent Updates]__ – Display a list of recently updated documents anywhere with a single line of code
 - :material-page-layout-sidebar-left: __[Navigation]__ – Create a clear, concise, and comprehensive navigation structure
 - :material-page-layout-header: __[Header]__ – Customize the behavior of the header, add an announcement bar
 - :material-page-layout-footer: __[Footer]__ – Add links to your social media profiles or websites in the footer
@@ -22,7 +22,7 @@ setting up site search, and more.
 
 </div>
 
-  [Language]: changing-the-language.md
+  [Recent Updates]: adding-recent-updates-module.md
   [Navigation]: setting-up-navigation.md
   [Header]: setting-up-the-header.md
   [Footer]: setting-up-the-footer.md
@@ -59,16 +59,17 @@ versioned documentation that matches your project's versioning methodology.
 
 - :material-book-open-outline: __[Blog]__ – Set up a standalone blog or host it alongside your documentation
 - :material-comment-text-outline: __[Comment System]__ – Add a third-party comment system on any page or footer
-- :octicons-versions-16: __[Versioning]__ – Deploy multiple versions by integrating with external utilities
 - :octicons-repo-16: __[Repository]__ – Connect your documentation to your git repository
+- :simple-meta: __[Dates & Authors]__ – Adding date author information to documents
 
 </div>
 
   [Blog]: setting-up-a-blog.md
   [Comment System]: adding-a-comment-system.md
-  [Versioning]: setting-up-versioning.md
   [Repository]: adding-a-git-repository.md
+  [Dates & Authors]: adding-document-dates-authors.md
 
+<!-- 
 ## Optimization
 
 Add site analytics and build an optimized site by adding automatic image
@@ -88,3 +89,4 @@ offline-capable.
   [Optimized site]: building-an-optimized-site.md
   [Data Privacy]: ensuring-data-privacy.md
   [Offline usage]: building-for-offline-usage.md
+ -->
