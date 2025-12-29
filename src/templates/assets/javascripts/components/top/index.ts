@@ -163,9 +163,9 @@ export function mountBackToTop(
       takeUntil(done$),
       distinctUntilKeyChanged("height")
     )
-      .subscribe(({ height }) => {
-        el.style.bottom = `${height}px`
-      })
+      // .subscribe(({ height }) => {
+      //   el.style.bottom = `${height - 16}px`
+      // })
 
   /* Go back to top */
   fromEvent(el, "click")
