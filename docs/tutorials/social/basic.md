@@ -2,7 +2,7 @@
 
 Social cards are images that other systems such as social media can display as
 a preview for content linked to. It is easy to get started with the social
-plugin, true to the motto of Material with MkDocs: "batteries included."
+plugin, true to the motto of MaterialX with MkDocs: "batteries included."
 
 ## Basics
 
@@ -65,7 +65,7 @@ By default, the plugin uses the logo that you set for the whole site, either
 through the `theme.logo` or the `theme.icon.logo` setting. The difference
 between the two is that the `theme.icon.logo` version will directly embed the
 logo's SVG code into the HTML, allowing it to inherit CSS color settings. When
-you use `theme.logo`, the Material includes the logo as an image.
+you use `theme.logo`, the MaterialX includes the logo as an image.
 
 You can set your own logo specific for the social cards as well. The path used
 is relative to your project root and needs to point to an SVG file or a pixel

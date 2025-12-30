@@ -14,7 +14,7 @@ use the default layout as the basis.
 
 !!! example "Copy default layout to customize"
 
-    Copy the default social card layout from your installation of Material
+    Copy the default social card layout from your installation of MaterialX
     for MkDocs to a new directory `layouts`. The instructions below assume you
     are in your project root and have a virtual environment within this. The
     path on your machine, of course, may differ.

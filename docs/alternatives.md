@@ -1,7 +1,7 @@
 # Alternatives
 
 There are tons of static site generators and themes out there and choosing the
-right one for your tech stack is a tough decision. If you're unsure if Material
+right one for your tech stack is a tough decision. If you're unsure if MaterialX
 for MkDocs is the right solution for you, this section should help you evaluate
 alternative solutions.
 
@@ -10,7 +10,7 @@ alternative solutions.
 [Docusaurus] by Facebook is a very popular documentation generator and a good
 choice if you or your company are already using [React] to build your site.
 It will generate a [single page application] which is fundamentally different
-from the site Material for MkDocs generates for you.
+from the site MaterialX for MkDocs generates for you.
 
 __Advantages__
 
@@ -48,7 +48,7 @@ __Advantages__
 
 - Battle-tested, rich ecosystem, many themes to choose from
 - Brings great capabilities for blogging  (permalinks, tags, etc.)
-- Generates a SEO-friendly site, similar to Material for MkDocs
+- Generates a SEO-friendly site, similar to MaterialX for MkDocs
 
 __Challenges__
 
@@ -106,7 +106,7 @@ __Challenges__
 - Limited Markdown capabilities, not as advanced as Python Markdown
 - Many Open Source projects moved away from GitBook
 
-Many users switched from [GitBook] to Material for MkDocs, as they want to keep
+Many users switched from [GitBook] to MaterialX for MkDocs, as they want to keep
 control and ownership of their documentation, favoring an Open Source solution.
 
   [GitBook]: https://www.gitbook.com/

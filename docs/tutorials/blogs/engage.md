@@ -17,7 +17,7 @@ user follows. They usually support downloading the blog content for offline
 consumption.
 
 An easy way to create an RSS feed for your blog is to use the
-[MkDocs RSS Plugin], which is well integrated with Material for MkDocs.
+[MkDocs RSS Plugin], which is well integrated with MaterialX for MkDocs.
 Since it is a third-party plugin, you need to install it before using it.
 
 [MkDocs RSS Plugin]: https://guts.github.io/mkdocs-rss-plugin
@@ -41,7 +41,7 @@ Since it is a third-party plugin, you need to install it before using it.
     Now, configure the plugin in the `mkdocs.yml`. The options provided restrict
     the pages that RSS entries are created for to the blog posts, which is
     probably what you want. Also note the configuration of the date fields to
-    match the format that Material for MkDocs uses to accommodate both a
+    match the format that MaterialX for MkDocs uses to accommodate both a
     creation date and a date for updates.
 
     ```yaml hl_lines="9"
@@ -82,7 +82,7 @@ own accounts.
 ### Profile links
 
 Links to social media profiles a usually provided in the footer of pages and
-Material for MkDocs makes this easy. All you need to do is to provide the
+MaterialX for MkDocs makes this easy. All you need to do is to provide the
 necessary links and define the icons to use.
 
 !!! example "Adding social media profile links"
@@ -215,7 +215,7 @@ be prepared to use it regularly and to moderate discussions.
 ### Giscus integration
 
 In this tutorial, we will be using [Giscus] because it is free, open source,
-and uses [GitHub Discussions] as a backend. Because a lot of users of Material
+and uses [GitHub Discussions] as a backend. Because a lot of users of MaterialX
 for MkDocs use GitHub, this seems like an obvious choice.
 
 [Giscus]: https://giscus.app/

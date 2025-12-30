@@ -60,7 +60,7 @@ versioned documentation that matches your project's versioning methodology.
 - :material-book-open-outline: __[Blog]__ – Set up a standalone blog or host it alongside your documentation
 - :material-comment-text-outline: __[Comment System]__ – Add a third-party comment system on any page or footer
 - :octicons-repo-16: __[Repository]__ – Connect your documentation to your git repository
-- :simple-meta: __[Dates & Authors]__ – Adding date author information to documents
+- :material-account-clock-outline: __[Dates & Authors]__ – Adding date author information to documents
 
 </div>
 

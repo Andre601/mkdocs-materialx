@@ -1,6 +1,6 @@
 # Browser support
 
-Material for MkDocs goes at great lengths to support the largest possible range
+MaterialX for MkDocs goes at great lengths to support the largest possible range
 of browsers while retaining the simplest possibilities for customization via
 modern CSS features like [custom properties] and [mask images].
 
@@ -9,7 +9,7 @@ modern CSS features like [custom properties] and [mask images].
 
 ## Supported browsers
 
-The following table lists all browsers for which Material for MkDocs offers full
+The following table lists all browsers for which MaterialX for MkDocs offers full
 support, so it can be assumed that all features work without degradation. If you
 find that something doesn't look right in a browser which is in the supported
 version range, please [open an issue]:
@@ -63,5 +63,5 @@ the following older browser versions might work with some additional effort:
   can be mitigated with some additional effort.
 - :fontawesome-brands-internet-explorer: __Internet Explorer__ - no support,
   mainly due to missing support for [custom properties]. The last version of
-  Material for MkDocs to support Internet Explorer is
+  MaterialX for MkDocs to support Internet Explorer is
   <!-- md:version 4.6.3 -->.

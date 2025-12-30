@@ -47,11 +47,11 @@ The following configuration options are supported:
 
 <!-- md:option recently-updated.exclude -->
 
-:   <!-- md:default `[]` --> This option specifies the documents to be excluded.
+:   <!-- md:default none --> This option specifies the documents to be excluded.
 
 <!-- md:option recently-updated.template -->
 
-:   <!-- md:default `None` --> This option specifies the path to the custom rendering template.
+:   <!-- md:default none --> This option specifies the path to the custom rendering template.
 
 ## Add to sidebar navigation
 

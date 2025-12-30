@@ -1,13 +1,13 @@
 # Tutorials
 
 In addition to the basic getting started guides, we offer tutorials that aim to
-show how you can use Material for MkDocs in different use cases. In contrast to
+show how you can use MaterialX for MkDocs in different use cases. In contrast to
 the getting started guides or the reference documentation, the tutorials show
-the breadth of features available in Material for MkDocs but also within
+the breadth of features available in MaterialX for MkDocs but also within
 the wider MkDocs ecosystem.
 
 The tutorials guide you through worked examples, so by following them you should
-gain not only an understanding of how to use Material for MkDocs, but also
+gain not only an understanding of how to use MaterialX for MkDocs, but also
 a template for your own projects. For convenience, these templates are also
 available as template repositories on GitHub.
 
@@ -39,7 +39,7 @@ available as template repositories on GitHub.
 
 ## Social cards
 * [Basics](social/basic.md) (20 min) <br/>
-  shows you how to configure Material for MkDocs to create social cards for
+  shows you how to configure MaterialX for MkDocs to create social cards for
   your content.
 * [Custom cards](social/custom.md) (15 min)<br/>
   shows you how to design your own custom social cards.

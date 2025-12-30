@@ -121,12 +121,12 @@ This implies that there are relatively few categories as otherwise the
 !!! tip "Single or multiple categories?"
 
     While it is traditionally the case that a blog post would belong to only
-    one category, Material for MkDocs actually allows you to assign more
+    one category, MaterialX for MkDocs actually allows you to assign more
     than one. While this gives you a degree of freedom, you should
     probably not use this too much, not least because you can use tags to
     deal with multiple classifications. We will cover them in the next step.
 
-Material allows you to control which categories blog authors can use. You
+MaterialX allows you to control which categories blog authors can use. You
 declare them in the `mkdocs.yml`. This way you can make sure everyone sticks
 to agreed categories and that the plugin detects typos.
 
@@ -201,7 +201,7 @@ categories, the tags plugin does not do the same for tags. This is because the
 tags plugin is not specific for blogs. You can use it for any site content, so
 it is not obvious were the tag index should go.
 
-You can configure a basic tag index using the public version of Material for
+You can configure a basic tag index using the public version of MaterialX for
 MkDocs. The Insider Edition supports this as well, of course, but also provides
 an alternative index mechanism that allows for an arbitrary number of tag
 indexes, scoped listings, shadow tags, nested tags, and much more.
@@ -433,7 +433,7 @@ of each page for something that interests them without having to scroll
 
 ## Custom slugs
 
-If, for some reason, you are not happy with the way that Material for MkDocs
+If, for some reason, you are not happy with the way that MaterialX for MkDocs
 turns headings into slugs, you can create your own slugify function or you
 can manually define a slug for a specific post.
 

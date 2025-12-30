@@ -228,7 +228,7 @@ nav:
     - Setting up versioning: setup/setting-up-versioning.md
     - Setting up the header: setup/setting-up-the-header.md
     - Setting up the footer: setup/setting-up-the-footer.md
-    # - Ensuring data privacy: setup/ensuring-data-privacy.md
+    - Ensuring data privacy: setup/ensuring-data-privacy.md
     # - Building an optimized site: setup/building-an-optimized-site.md
     # - Building for offline usage: setup/building-for-offline-usage.md
     - Extensions:

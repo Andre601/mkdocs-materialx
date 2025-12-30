@@ -136,8 +136,6 @@ and much more:
 - [Setting up the footer]
 - [Adding a git repository]
 - [Adding a comment system]
-- [Building an optimized site]
-- [Building for offline usage]
 
 </div>
 
@@ -161,8 +159,6 @@ technical writing experience.
   [Setting up the footer]: setup/setting-up-the-footer.md
   [Adding a git repository]: setup/adding-a-git-repository.md
   [Adding a comment system]: setup/adding-a-comment-system.md
-  [Building for offline usage]: setup/building-for-offline-usage.md
-  [Building an optimized site]: setup/building-an-optimized-site.md
   [Markdown extensions]: setup/extensions/index.md
 
 ## Templates
@@ -263,7 +259,6 @@ or your private web space.
 
 If you intend to distribute your documentation as a set of files to be
 read from a local filesystem rather than a web server (such as in a
-`.zip` file), please read the notes about [building for offline
-usage].
+`.zip` file), please read the notes about [built-in offline plugin].
 
-  [building for offline usage]: setup/building-for-offline-usage.md
+  [built-in offline plugin]: plugins/offline.md

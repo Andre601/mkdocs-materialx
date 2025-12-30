@@ -1,6 +1,6 @@
 # Customization
 
-Project documentation is as diverse as the projects themselves and Material for
+Project documentation is as diverse as the projects themselves and MaterialX for
 MkDocs is a great starting point for making it look beautiful. However, as you
 write your documentation, you may reach a point where small adjustments are
 necessary to preserve your brand's style.
@@ -8,7 +8,7 @@ necessary to preserve your brand's style.
 ## Adding assets
 
 [MkDocs] provides several ways to customize a theme. In order to make a few
-small tweaks to Material for MkDocs, you can just add CSS and JavaScript files to
+small tweaks to MaterialX for MkDocs, you can just add CSS and JavaScript files to
 the `docs` directory.
 
   [MkDocs]: https://www.mkdocs.org
@@ -59,7 +59,7 @@ extra_javascript:
     It is likely that you will want to run your JavaScript code only
     once the page has been fully loaded by the browser. This means
     installing a callback function subscribing to events on the
-    `document$` observable exported by Material for MkDocs.
+    `document$` observable exported by MaterialX for MkDocs.
     Using the `document$` observable is particularly important if you
     are using [instant loading] since it will not result in a page
     refresh in the browser - but subscribers on the observable will be
@@ -81,14 +81,14 @@ extra_javascript:
 
 If you want to alter the HTML source (e.g. add or remove some parts), you can
 extend the theme. MkDocs supports [theme extension], an easy way to override
-parts of Material for MkDocs without forking from git. This ensures that you
+parts of MaterialX for MkDocs without forking from git. This ensures that you
 can update to the latest version more easily.
 
   [theme extension]: https://www.mkdocs.org/user-guide/customizing-your-theme/#using-the-theme-custom_dir
 
 ### Setup and theme structure
 
-Enable Material for MkDocs as usual in `mkdocs.yml`, and create a new folder
+Enable MaterialX for MkDocs as usual in `mkdocs.yml`, and create a new folder
 for `overrides` which you then reference using the [`custom_dir`][custom_dir]
 setting:
 
@@ -101,7 +101,7 @@ theme:
 !!! warning "Theme extension prerequisites"
 
     As the [`custom_dir`][custom_dir] setting is used for the theme extension
-    process, Material for MkDocs needs to be installed via `pip` and referenced
+    process, MaterialX for MkDocs needs to be installed via `pip` and referenced
     with the [`name`][name] setting in `mkdocs.yml`. It will not work when
     cloning from `git`.
 
@@ -244,7 +244,7 @@ The following template blocks are provided by the theme:
 
 ## Theme development
 
-Material for MkDocs is built on top of [TypeScript], [RxJS] and [SASS], and
+MaterialX for MkDocs is built on top of [TypeScript], [RxJS] and [SASS], and
 uses a lean, custom build process to put everything together.[^1] If you want
 to make more fundamental changes, it may be necessary to make the adjustments
 directly in the source of the theme and recompile it.
@@ -350,7 +350,7 @@ npm run build # (1)!
 ```
 
 1.  While this command will build all theme files, it will skip the overrides
-    used in Material for MkDocs' own documentation which are not distributed
+    used in MaterialX for MkDocs' own documentation which are not distributed
     with the theme. If you forked the theme and want to build the overrides
     as well, e.g. before submitting a PR with changes, use:
 
