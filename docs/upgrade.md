@@ -461,7 +461,7 @@ matches the new structure:
     +  {% if not config.extra.generator == false %}
     +    Made with
     +    <a href="https://jaywhj.github.io/mkdocs-materialx/" target="_blank" rel="noopener">
-    +      Material for MkDocs
+    +      MaterialX for MkDocs
     +    </a>
     +  {% endif %}
     +</div>
@@ -483,7 +483,7 @@ matches the new structure:
     -        {% if not config.extra.generator == false %}
     -          Made with
     -          <a href="https://jaywhj.github.io/mkdocs-materialx/" target="_blank" rel="noopener">
-    -            Material for MkDocs
+    -            MaterialX for MkDocs
     -          </a>
     -        {% endif %}
     -        {{ extracopyright }}
