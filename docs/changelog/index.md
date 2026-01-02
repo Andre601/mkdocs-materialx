@@ -2,6 +2,10 @@
 
 ## MaterialX for MkDocs
 
+### 10.0.5 <small>January 2, 2026</small> { id="10.0.5" }
+
+- **New**: Refactor the TOC components for mobile, now you can experience TOC perfectly on mobile!
+
 ### 10.0.4 <small>January 2, 2026</small> { id="10.0.4" }
 
 - **New**: Refactor the TOC components for mobile, now you can experience TOC perfectly on mobile!
@@ -14,8 +18,7 @@
 - **Fixed**: iconsearch_index.json write issue
 - **Fixed**: Language selector escapes viewport when too wide on mobile
 - **Fixed**: Replace the gap attribute to increase compatibility
-- **Fixed**: Adjust the style for kbd styles
-- **Fixed**: Adjust the border-radius of all styles
+- **Fixed**: Adjust the style of kbd shortcuts
 - **Fixed**: Adjust UI shadow effect
 - **Fixed**: Merge the upstream 9.7.1 update
 - **Fixed**: Update Doc Site, see [MaterialX](https://jaywhj.github.io/mkdocs-materialx/)
