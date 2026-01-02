@@ -483,14 +483,15 @@ theme:
   [Navigation integration disabled]: ../assets/screenshots/navigation-tabs.png
   [navigation.indexes]: #section-index-pages
 
-### Back-to-top button
+### Back-to-top container
 
-<!-- md:version 7.1.0 -->
-<!-- md:feature -->
+<!-- md:version 10.0.4 -->
 
-A back-to-top button can be shown when the user, after scrolling down, starts
+~~A back-to-top button can be shown when the user, after scrolling down, starts
 to scroll up again. It's rendered centered and just below the header. Add the
-following lines to `mkdocs.yml`:
+following lines to `mkdocs.yml`:~~
+
+Starting with <!-- md:version 10.0.4 -->, back-to-top will always be displayed as a container for displaying nav and toc navigation at the bottom on mobile, independent of the `navigation.top` configuration:
 
 ``` yaml
 theme:
