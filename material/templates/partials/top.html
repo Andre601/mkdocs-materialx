@@ -10,7 +10,9 @@
     {% include ".icons/" ~ icon ~ ".svg" %}
     <span>{{ lang.t("top") }}</span>
   </button>
+  {% if "toc.integrate" not in features %}
   <label class="md-top__button" for="__toc">
     {% include ".icons/material/format-list-numbered-rtl.svg" %}
   </label>
+  {% endif %}
 </div>

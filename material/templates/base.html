@@ -37,7 +37,7 @@
         <link rel="alternate" type="application/rss+xml" title="{{ lang.t('rss.updated') }}" href="{{ 'feed_rss_updated.xml' | url }}">
       {% endif %}
       <link rel="icon" href="{{ config.theme.favicon | url }}">
-      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-materialx-10.0.4">
+      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-materialx-10.0.5">
     {% endblock %}
     {% block htmltitle %}
       {% if page.meta and page.meta.title %}
@@ -49,7 +49,7 @@
       {% endif %}
     {% endblock %}
     {% block styles %}
-      <link rel="stylesheet" href="{{ 'assets/stylesheets/main.c6bc0ec0.min.css' | url }}">
+      <link rel="stylesheet" href="{{ 'assets/stylesheets/main.2b547a30.min.css' | url }}">
       {% if config.theme.palette %}
         {% set palette = config.theme.palette %}
         <link rel="stylesheet" href="{{ 'assets/stylesheets/palette.dcd3f6cf.min.css' | url }}">
@@ -193,9 +193,7 @@
           {% endblock %}
           {% include "partials/javascripts/content.html" %}
         </div>
-        {% if "navigation.top" in features %}
           {% include "partials/top.html" %}
-        {% endif %}
       </main>
       {% block footer %}
         {% include "partials/footer.html" %}
@@ -252,7 +250,7 @@
       </script>
     {% endblock %}
     {% block scripts %}
-      <script src="{{ 'assets/javascripts/bundle.c31783ce.min.js' | url }}"></script>
+      <script src="{{ 'assets/javascripts/bundle.f019036d.min.js' | url }}"></script>
       {% for script in config.extra_javascript %}
         {{ script | script_tag }}
       {% endfor %}
