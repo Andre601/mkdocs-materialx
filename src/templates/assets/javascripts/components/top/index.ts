@@ -215,7 +215,7 @@ export function mountBackToTop(
   //     distinctUntilKeyChanged("height")
   //   )
   //     .subscribe(({ height }) => {
-  //       el.style.bottom = `${height - 16}px`
+  //       el.style.top = `${height + 16}px`
   //     })
 
   /* Go back to top */
