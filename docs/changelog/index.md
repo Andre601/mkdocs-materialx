@@ -5,7 +5,7 @@
 ### 10.0.5 <small>January 5, 2026</small> { id="10.0.5" }
 
 - New: **Refactor the TOC components for mobile**, now you can experience TOC perfectly on mobile!
-- Fixed: Show/hide top navigation container wisely
+- Fixed: Show/hide bottom navigation container wisely
 - Fixed: TOC not hiding when clicked
 - Fixed: Gaussian Blur not working in Safari
 - Fixed: Adjust animation delay
