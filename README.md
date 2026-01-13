@@ -28,7 +28,7 @@ For a more detailed description of the differences, see documentation: [Why Mate
 
 | Aspect          |                    Zensical                    |                          MaterialX                  |
 | :-------------- | :--------------------------------------------: | :-------------------------------------------------: |
-| **Audience**    | Technical developers / Technical documentation |    All users / Markdown notes & documents  |
+| **Audience**    | Technical developers <br /> Technical documentation |    All users <br /> Markdown notes & documents  |
 | **Direction**   |  Increasingly feature-heavy and complex | Prioritizes extreme ease of use, stays increasingly lightweight |
 | **Language**    |                      Rust                      |                       Python                        |
 | **Stage**       |                  Early-stage                   |                  Mature and stable                  |
