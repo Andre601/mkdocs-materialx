@@ -22,7 +22,7 @@ For a more detailed description of the differences, see documentation: [Why Mate
 | :------------------ | :--------------------------------: | :-----------------------------------------------: |
 | **Latest Version**  |       mkdocs-material-9.7.1        |       mkdocs-materialx-10.x (based on v9.7.1)     |
 | **Current Status**  |     Nearing end-of-maintenance     |          Active maintenance and updates           |
-| **Feature Updates** |      None (with legacy bugs)       | Bug fixes, new feature additions, UX improvements, etc. See [Changelog](changelog/index.md) |
+| **Feature Updates** |      None (with legacy bugs)       | Bug fixes, new feature additions, UX improvements, etc. See [Changelog](https://github.com/jaywhj/mkdocs-materialx/releases) |
 
 ### Differences from Zensical
 
