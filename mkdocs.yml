@@ -143,8 +143,8 @@ markdown_extensions:
       permalink: true
   - pymdownx.arithmatex:
       generic: true
-  - pymdownx.betterem:
-      smart_enable: all
+  - pymdownx.betterem
+      # smart_enable: all
   - pymdownx.caret
   - pymdownx.details
   - pymdownx.emoji:
@@ -188,6 +188,7 @@ not_in_nav: |
 nav:
   - Home: index.md
   - Getting started:
+    - Differences: differences.md
     - Installation: getting-started.md
     - Creating your site: creating-your-site.md
     - Publishing your site: publishing-your-site.md

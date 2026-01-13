@@ -13,7 +13,7 @@ setting up site search, and more.
 
 <div class="grid cards" markdown>
 
-- :simple-lastpass: __[Recent Updates]__ – Display a list of recently updated documents anywhere with a single line of code
+- :simple-lastpass: __[Recent Updates]__ – Display a list of recently updated documents anywhere
 - :material-page-layout-sidebar-left: __[Navigation]__ – Create a clear, concise, and comprehensive navigation structure
 - :material-page-layout-header: __[Header]__ – Customize the behavior of the header, add an announcement bar
 - :material-page-layout-footer: __[Footer]__ – Add links to your social media profiles or websites in the footer
@@ -60,7 +60,7 @@ versioned documentation that matches your project's versioning methodology.
 - :material-book-open-outline: __[Blog]__ – Set up a standalone blog or host it alongside your documentation
 - :material-comment-text-outline: __[Comment System]__ – Add a third-party comment system on any page or footer
 - :octicons-repo-16: __[Repository]__ – Connect your documentation to your git repository
-- :material-account-clock-outline: __[Dates & Authors]__ – Adding date author information to documents
+- :material-account-clock-outline: __[Dates & Authors]__ – Adding dates and authors to your documents
 
 </div>
 
