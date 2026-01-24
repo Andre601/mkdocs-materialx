@@ -9,7 +9,7 @@ status: new
 
 You can add a list of recently updated documents anywhere in your document with a single line of code. This is ideal for sites **with a large number of documents**, so that **readers can quickly see what's new**.
 
-![recently-updated](../assets/screenshots/recently-updated.png)
+![recently-updated](../assets/screenshots/recently-updated-en.gif)
 
 ## Installation
 
@@ -29,7 +29,6 @@ then configure the switch recently-updated in `mkdocs.yml`:
       exclude:         # Exclude documents you don't want to show
         - index.md
         - blog/*
-      # template: templates/recently_updated_list.html
 ```
 
 You can also install the plugin [mkdocs-recently-updated-docs] to use alone
@@ -49,10 +48,6 @@ The following configuration options are supported:
 
 :   <!-- md:default none --> This option specifies the documents to be excluded.
 
-<!-- md:option recently-updated.template -->
-
-:   <!-- md:default none --> This option specifies the path to the custom rendering template.
-
 ## Add to sidebar navigation
 
 Download the sample template [nav.html](https://github.com/jaywhj/mkdocs-document-dates/blob/main/templates/overrides/partials/nav.html), and override this path `docs/overrides/partials/nav.html`
@@ -64,7 +59,3 @@ Insert this line anywhere in your document:
 ```yaml
 <!-- RECENTLY_UPDATED_DOCS -->
 ```
-
-## Custom template
-
-See [templates](https://github.com/jaywhj/mkdocs-recently-updated-docs/tree/main/mkdocs_recently_updated_docs/templates) directory

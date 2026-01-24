@@ -324,7 +324,7 @@ Step: Download the sample template [source-file.html](https://github.com/jaywhj/
 
 The recent updates module is perfect for sites **with a large number of documents**, so that **readers can quickly see what's new**.
 
-![recently-updated](../assets/screenshots/recently-updated.png)
+![recently-updated](../assets/screenshots/recently-updated-en.gif)
 
 You can get the recently updated document data (in descending order of update date) in any template via the variable `config.extra.recently_updated_docs`, then customize the rendering logic yourself
 
