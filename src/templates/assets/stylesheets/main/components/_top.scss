@@ -37,11 +37,6 @@
     transform 125ms cubic-bezier(0.4, 0, 0.2, 1),
     opacity   125ms;
 
-  // Add spacing between buttons for browsers that don't support gap
-  &__button:not(:last-child) {
-    margin-inline-end: px2rem(30px);
-  }
-
   // [print]: Hide back-to-top button
   @media print {
     display: none;
@@ -127,6 +122,8 @@
 
     // Hide Nav button on desktop
     &[for="__drawer"] {
+      margin-inline-end: px2rem(30px);
+
       @include break-from-device(screen) {
         display: none;
       }
@@ -134,6 +131,8 @@
 
     // Hide TOC button when TOC is visible as sidebar
     &[for="__toc"] {
+      margin-inline-start: px2rem(30px);
+
       @include break-from-device(tablet landscape) {
         display: none;
       }
