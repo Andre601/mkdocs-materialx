@@ -11,6 +11,14 @@ You can add a list of recently updated documents anywhere in your document with 
 
 ![recently-updated](../assets/screenshots/recently-updated-en.gif)
 
+## Features
+
+- Display recently updated documents in descending order by update time, list items are dynamically updated
+- Support multiple view modes including list, detail and grid
+- Support automatic extraction of article summaries
+- Support custom display quantity
+- Support exclude specified files or folders
+
 ## Installation
 
 This feature is provided by the plugin [document-dates], which should be installed first:

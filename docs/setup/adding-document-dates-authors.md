@@ -328,7 +328,11 @@ The recent updates module is perfect for sites **with a large number of document
 
 You can get the recently updated document data (in descending order of update date) in any template via the variable `config.extra.recently_updated_docs`, then customize the rendering logic yourself
 
-Or refer to the documentation [Recent updates module](adding-recent-updates-module.md) to use the preset template (List titles and links will be rendered automatically)
+Or refer to the documentation [Recent updates module](adding-recent-updates-module.md) to use the preset template:
+
+- Display recently updated documents in descending order by update time, list items are dynamically updated
+- Support multiple view modes including list, detail and grid
+- Support automatic extraction of article summaries
 
 ## Add localized languages
 
