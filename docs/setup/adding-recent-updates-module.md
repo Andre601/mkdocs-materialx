@@ -16,6 +16,7 @@ You can add a list of recently updated documents anywhere in your document with 
 - Display recently updated documents in descending order by update time, list items are dynamically updated
 - Support multiple view modes including list, detail and grid
 - Support automatic extraction of article summaries
+- Support for customizing article cover in Front Matter
 - Support custom display quantity
 - Support exclude specified files or folders
 
@@ -66,4 +67,14 @@ Insert this line anywhere in your document:
 
 ```yaml
 <!-- RECENTLY_UPDATED_DOCS -->
+```
+
+## Configuring article cover
+
+Use the field `cover` in Front Matter to specify the article cover, which supports URL paths and local file paths, for example:
+
+```yaml
+---
+cover: assets/cat.jpg
+---
 ```

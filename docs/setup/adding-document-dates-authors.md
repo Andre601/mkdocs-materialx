@@ -37,28 +37,108 @@ You can add date and author information to your documents via the plugin [docume
 pip install mkdocs-document-dates
 ```
 
-## Configuration
-
-Just add the plugin to your `mkdocs.yml`:
+Then, add the following lines to `mkdocs.yml`:
 
 ```yaml
 plugins:
   - document-dates
 ```
 
-Or, full configuration:
+Or, common configuration:
 
 ```yaml
 plugins:
   - document-dates:
-      position: top            # Display position: top(after title) bottom(end of document), default: top 
+      position: top            # Display position: top(after title) bottom(end of document), default: top
       type: date               # Date type: date datetime timeago, default: date
       exclude:                 # List of excluded files
         - temp.md                  # Example: exclude the specified file
         - blog/*                   # Example: exclude all files in blog folder, including subfolders
-      date_format: '%Y-%m-%d'  # Date format strings (e.g., %Y-%m-%d, %b %d, %Y)
-      time_format: '%H:%M:%S'  # Time format strings (valid only if type=datetime)
 ```
+
+## Configuration
+
+The following configuration options are supported:
+
+<!-- md:option document-dates.position -->
+
+:   <!-- md:default `top` --> This option specifies the display position of the plugin. 
+    Valid values are `top`, `bottom`:
+
+    ```yaml
+    plugins:
+      - document-dates:
+          position: top
+    ```
+
+<!-- md:option document-dates.type -->
+
+:   <!-- md:default `date` --> This option specifies the type of date to be displayed.
+    Valid values are `date`, `datetime`, `timeago`:
+
+    ```yaml
+    plugins:
+      - document-dates:
+          type: date
+    ```
+
+<!-- md:option document-dates.exclude -->
+
+:   <!-- md:default none --> This option specifies a list of excluded files:
+
+    ```yaml
+    plugins:
+      - document-dates:
+          exclude:
+            - temp.md   # Example: exclude the specified file
+            - blog/*    # Example: exclude all files in blog folder, including subfolders
+    ```
+
+<!-- md:option document-dates.date_format -->
+
+:   <!-- md:default `%Y-%m-%d` --> This option specifies the date formatting string:
+
+    ```yaml
+    plugins:
+      - document-dates:
+          date_format: '%Y-%m-%d'   # e.g., %Y-%m-%d, %b %d, %Y
+          time_format: '%H:%M:%S'   # valid only if type=datetime
+    ```
+  
+  <!-- md:option document-dates.show_created -->
+
+:   <!-- md:default `true` --> This option specifies whether to display the creation date.
+    Valid values are `true`, `false`:
+
+    ```yaml
+    plugins:
+      - document-dates:
+          show_created: true
+    ```
+
+<!-- md:option document-dates.show_updated -->
+
+:   <!-- md:default `true` --> This option specifies whether to display the last updated date.
+    Valid values are `true`, `false`:
+
+    ```yaml
+    plugins:
+      - document-dates:
+          show_updated: true
+    ```
+
+<!-- md:option document-dates.show_author -->
+
+:   <!-- md:default `true` --> This option specifies the type of author display.
+    Valid values are `true`(avatar), `false`(hidden), `text`(text):
+
+    ```yaml
+    plugins:
+      - document-dates:
+          show_author: true   # true(avatar) text(text) false(hidden)
+    ```
+
+  [document-dates]: https://github.com/jaywhj/mkdocs-document-dates
 
 ## Specify datetime
 
@@ -126,6 +206,25 @@ The plugin automatically caches the creation date (no need to cache the last upd
 - If you find that the hook auto-installation fails, you can also use this command to install it manually: `mkdocs-document-dates-hooks`
 
 Fallback: If the cached file doesn't exist or automatic caching fails, the creation date will not be affected, it will proceed to priority 3 (read the first git commit date as the creation date)
+
+### Notes on using build environments
+
+If the creation date is based on the date of the first git commit (i.e., when no custom creation date and cache file creation date are available), and you are deploying through a CI system, you might need to configure the git fetch depth in the CI system to retrieve the accurate record of the first git commit, for example:
+
+```yaml hl_lines="6 7"
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+```
+
+- Github Actions: set `fetch-depth` to `0` ([docs](https://github.com/actions/checkout))
+- Gitlab Runners: set `GIT_DEPTH` to `0` ([docs](https://docs.gitlab.com/ee/ci/pipelines/settings.html#limit-the-number-of-changes-fetched-during-clone))
+- Bitbucket pipelines: set `clone: depth: full` ([docs](https://support.atlassian.com/bitbucket-cloud/docs/configure-bitbucket-pipelinesyml/))
+- Azure Devops pipelines: set `Agent.Source.Git.ShallowFetchDepth` to something very high like `10e99` ([docs](https://docs.microsoft.com/en-us/azure/devops/pipelines/repos/pipeline-options-for-git?view=azure-devops#shallow-fetch))
 
 ### Adaptive to any environment
 
@@ -333,6 +432,7 @@ Or refer to the documentation [Recent updates module](adding-recent-updates-modu
 - Display recently updated documents in descending order by update time, list items are dynamically updated
 - Support multiple view modes including list, detail and grid
 - Support automatic extraction of article summaries
+- Support for customizing article cover in Front Matter
 
 ## Add localized languages
 
