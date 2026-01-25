@@ -33,6 +33,8 @@ You can add date and author information to your documents via the plugin [docume
 
 ## Installation
 
+Install it with `pip`:
+
 ```bash
 pip install mkdocs-document-dates
 ```
