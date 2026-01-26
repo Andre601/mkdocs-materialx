@@ -205,7 +205,7 @@
     @include break-from-device(tablet landscape) {
       height: px2rem(36px);
       background-color: transparent;
-      border-radius: px2rem(2px);
+      border-radius: px2rem(8px);
       border: 1px solid var(--md-default-fg-color--lightest);
 
       // Search form on hover
@@ -218,7 +218,7 @@
     [data-md-toggle="search"]:checked ~ .md-header & {
       color: var(--md-default-fg-color);
       background-color: var(--md-default-bg-color);
-      border-radius: px2rem(2px) px2rem(2px) 0 0;
+      border-radius: px2rem(8px) px2rem(8px) 0 0;
       box-shadow: 0 0 px2rem(12px) hsla(0, 0%, 0%, 0.07);
     }
   }
@@ -419,8 +419,8 @@
     z-index: 1;
     width: 100%;
     overflow: hidden;
-    border-end-start-radius: px2rem(2px);
-    border-end-end-radius: px2rem(2px);
+    border-end-start-radius: px2rem(8px);
+    border-end-end-radius: px2rem(8px);
 
     // [tablet portrait -]: Search modal
     @include break-to-device(tablet portrait) {
