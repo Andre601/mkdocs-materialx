@@ -29,9 +29,10 @@ Therefore, MaterialX will adhere to the following goals and principles:
 
 | Aspect              |          mkdocs-material           |                       MaterialX                   |
 | :------------------ | :--------------------------------: | :-----------------------------------------------: |
-| **Latest Version**  |       mkdocs-material-9.7.1        |       mkdocs-materialx-10.x (based on v9.7.1)     |
+| **Latest Version**  |       mkdocs-material-9.7.1        | mkdocs-materialx-10.x <br />(based on mkdocs-material-9.7.1) |
+| **Usage**           | Configure the theme name as `material` in mkdocs.yml | Use the new theme name `materialx` in mkdocs.yml, everything else is the same as when using material |
 | **Current Status**  |     Nearing end-of-maintenance     |          Active maintenance and updates           |
-| **Feature Updates** |      None (with legacy bugs)       | Bug fixes, new feature additions, UX improvements, etc. See [Changelog](changelog/index.md) |
+| **Feature Updates** |      None (with legacy bugs)       | Bug fixes, new feature additions, UX improvements,<br />see [Changelog](changelog/index.md) |
 
 ??? quote "Key Update Highlights of MaterialX"
 
@@ -48,10 +49,30 @@ Therefore, MaterialX will adhere to the following goals and principles:
 
 | Aspect          |                    Zensical                    |                          MaterialX                  |
 | :-------------- | :--------------------------------------------: | :-------------------------------------------------: |
-| **Audience**    | Technical developers <br /> Technical documentation |    All users <br /> Markdown notes & documents  |
-| **Direction**   |  Increasingly feature-heavy and complex | Prioritizes extreme ease of use, stays increasingly lightweight |
+| **Audience**    | Technical developers <br /> Technical documentation |    All markdown users <br /> Markdown notes & documents  |
 | **Language**    |                      Rust                      |                       Python                        |
-| **Stage**       |                  Early-stage                   |                  Mature and stable                  |
-| **Ecosystem**   |         Non-existent, uncertain future         |               Rich, open, and vibrant               |
+| **Stage**       | Launched a few months ago, in early stages, basic functionality incomplete | Launched for over a decade, mature and stable |
+| **Usage**       | Adopts `zensical.toml`, an all-new configuration format. All configurations in the original mkdocs.yml need to be reconfigured from scratch | Continuing `mkdocs.yml`, zero migration cost |
+| **Ecosystem** | Built entirely from scratch, incompatible with all original MkDocs components, future development uncertain | Based on MkDocs & mkdocs-material-9.7.1, fully compatible with MkDocs' rich long-built ecosystem, open and vibrant |
+| **Core Focus** | Prioritizes technical customization, with increasingly cumbersome feature configurations and ever-growing complexity in usage | Focuses on universal functions & visual presentation, extreme ease of use as primary principle, evolving to be more lightweight |
 
 Zensical is impressive, but I cannot find a compelling reason to adopt it.
+
+## Quick Start
+
+Installation:
+
+``` sh
+pip install mkdocs-materialx
+```
+
+Configure `materialx` theme to mkdocs.yml:
+
+``` yaml
+theme:
+  name: materialx
+```
+
+!!! note
+
+    The theme name is `materialx`, not material. Everything else is the same as when using material.
