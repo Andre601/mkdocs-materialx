@@ -487,17 +487,26 @@ theme:
 
 <!-- md:version 10.0.4 -->
 
-~~A back-to-top button can be shown when the user, after scrolling down, starts
-to scroll up again. It's rendered centered and just below the header. Add the
-following lines to `mkdocs.yml`:~~
+Starting with <!-- md:version 10.0.4 -->, back-to-top will always be displayed as a container for displaying nav and toc navigation at the bottom on mobile, independent of the `navigation.top` configuration.
 
-Starting with <!-- md:version 10.0.4 -->, back-to-top will always be displayed as a container for displaying nav and toc navigation at the bottom on mobile, independent of the `navigation.top` configuration:
+??? quote "back-to-top button is deprecated"
 
-``` yaml
-theme:
-  features:
-    - navigation.top
-```
+    <div style="opacity: 0.5" markdown>
+
+    <!-- md:version 7.1.0 -->
+    <!-- md:feature -->
+
+    ~~A back-to-top button can be shown when the user, after scrolling down, starts
+    to scroll up again. It's rendered centered and just below the header. Add the
+    following lines to `mkdocs.yml`:~~
+
+    ``` yaml
+    theme:
+      features:
+        - navigation.top
+    ```
+
+    </div>
 
 ## Usage
 
