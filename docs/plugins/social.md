@@ -1,6 +1,6 @@
 ---
 title: Built-in social plugin
-icon: material/share-circle
+icon: fontawesome/regular/share-square
 ---
 
 # Built-in social plugin

@@ -1,3 +1,7 @@
+---
+icon: octicons/tag-24
+---
+
 # Setting up tags
 
 Material for MkDocs adds first-class support for categorizing pages with tags,

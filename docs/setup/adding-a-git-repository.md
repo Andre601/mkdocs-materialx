@@ -1,3 +1,7 @@
+---
+icon: material/source-fork
+---
+
 # Adding a git repository
 
 If your documentation is related to source code, MaterialX for MkDocs provides

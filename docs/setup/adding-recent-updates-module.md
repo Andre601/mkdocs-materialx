@@ -1,5 +1,6 @@
 ---
 status: new
+icon: simple/lastpass
 ---
 
 # Add recent updates module

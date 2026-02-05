@@ -1,3 +1,7 @@
+---
+icon: octicons/share-android-24
+---
+
 # Setting up social cards
 
 Material for MkDocs can automatically create beautiful social cards for your

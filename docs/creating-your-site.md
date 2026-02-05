@@ -1,26 +1,12 @@
 # Creating your site
 
-After you've [installed] Material for MkDocs, you can bootstrap your project
+After you've [installed] MaterialX for MkDocs, you can bootstrap your project
 documentation using the `mkdocs` executable. Go to the directory where you want
 your project to be located and enter:
 
 ```
 mkdocs new .
 ```
-
-Alternatively, if you're running Material for MkDocs from within Docker, use:
-
-=== "Unix, Powershell"
-
-    ```
-    docker run --rm -it -v ${PWD}:/docs squidfunk/mkdocs-material new .
-    ```
-
-=== "Windows (cmd)"
-
-    ```
-    docker run --rm -it -v "%cd%":/docs squidfunk/mkdocs-material new .
-    ```
 
 This will create the following structure:
 
@@ -55,9 +41,9 @@ plugins require the `site_url` to be set, so you should always do this.
   [publishing to GitHub pages]: publishing-your-site.md#github-pages
   [installation methods]: getting-started.md#installation
 
-???+ tip "Recommended: [configuration validation and auto-complete]"
+??? tip "Recommended: [configuration validation and auto-complete]"
 
-    In order to minimize friction and maximize productivity, Material for MkDocs
+    In order to minimize friction and maximize productivity, MaterialX for MkDocs
     provides its own [schema.json][^1] for `mkdocs.yml`. If your editor supports
     YAML schema validation, it's definitely recommended to set it up:
 
@@ -98,7 +84,7 @@ plugins require the `site_url` to be set, so you should always do this.
 
   [^1]:
     If you're a MkDocs plugin or Markdown extension author and your project
-    works with Material for MkDocs, you're very much invited to contribute a
+    works with MaterialX for MkDocs, you're very much invited to contribute a
     schema for your [extension] or [plugin] as part of a pull request on GitHub.
     If you already have a schema defined, or wish to self-host your schema to
     reduce duplication, you can add it via [$ref].
@@ -114,7 +100,7 @@ plugins require the `site_url` to be set, so you should always do this.
 
 ### Advanced configuration
 
-Material for MkDocs comes with many configuration options. The setup section
+MaterialX for MkDocs comes with many configuration options. The setup section
 explains in great detail how to configure and customize colors, fonts, icons
 and much more:
 
@@ -140,7 +126,7 @@ and much more:
 </div>
 
 Furthermore, see the list of supported [Markdown extensions] that are natively
-integrated with Material for MkDocs, delivering an unprecedented low-effort
+integrated with MaterialX for MkDocs, delivering an unprecedented low-effort
 technical writing experience.
 
   [Changing the colors]: setup/changing-the-colors.md
@@ -161,30 +147,6 @@ technical writing experience.
   [Adding a comment system]: setup/adding-a-comment-system.md
   [Markdown extensions]: setup/extensions/index.md
 
-## Templates
-
-If you want to jump start a new project, you can use one of our growing
-collection of templates:
-
-<div class="grid cards" markdown>
-
--   :octicons-repo-template-24: &nbsp; __[Blog][blog-template]__
-
-    ---
-
-    Create a blog
-
--   :octicons-repo-template-24: &nbsp; __[Social cards][social-cards-template]__
-
-    ---
-
-    Create documentation with social cards
-
-</div>
-
-[blog-template]: https://github.com/mkdocs-material/create-blog
-[social-cards-template]: https://github.com/mkdocs-material/create-social-cards
-
 ## Previewing as you write
 
 MkDocs includes a live preview server, so you can preview your changes as you
@@ -204,20 +166,6 @@ mkdocs serve # (1)!
     mkdocs serve --dirtyreload
     ```
 
-If you're running Material for MkDocs from within Docker, use:
-
-=== "Unix, Powershell"
-
-    ```
-    docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
-    ```
-
-=== "Windows"
-
-    ```
-    docker run --rm -it -p 8000:8000 -v "%cd%":/docs squidfunk/mkdocs-material
-    ```
-
 Point your browser to [localhost:8000][live preview] and you should see:
 
 [![Creating your site]][Creating your site]
@@ -225,6 +173,12 @@ Point your browser to [localhost:8000][live preview] and you should see:
   [--dirtyreload]: https://www.mkdocs.org/about/release-notes/#support-for-dirty-builds-990
   [live preview]: http://localhost:8000
   [Creating your site]: assets/screenshots/creating-your-site.png
+
+Alternatively, use the following command for automatic open and reload:
+
+```
+mkdocs serve --livereload -o
+```
 
 ## Building your site
 
@@ -234,20 +188,6 @@ files with:
 ```
 mkdocs build
 ```
-
-If you're running Material for MkDocs from within Docker, use:
-
-=== "Unix, Powershell"
-
-    ```
-    docker run --rm -it -v ${PWD}:/docs squidfunk/mkdocs-material build
-    ```
-
-=== "Windows"
-
-    ```
-    docker run --rm -it -v "%cd%":/docs squidfunk/mkdocs-material build
-    ```
 
 The contents of this directory make up your project documentation. There's no
 need for operating a database or server, as it is completely self-contained.

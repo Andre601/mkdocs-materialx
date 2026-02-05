@@ -1,4 +1,5 @@
 ---
+icon: octicons/search-24
 search:
   boost: 1.05
 ---

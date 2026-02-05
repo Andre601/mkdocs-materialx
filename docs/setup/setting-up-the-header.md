@@ -1,3 +1,7 @@
+---
+icon: material/dock-top
+---
+
 # Setting up the header
 
 Material for MkDocs' header can be customized to show an announcement bar that

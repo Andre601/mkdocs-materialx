@@ -1,3 +1,7 @@
+---
+title: Overview
+---
+
 # Setup
 
 Material for MkDocs offers a wide range of options for customizing your

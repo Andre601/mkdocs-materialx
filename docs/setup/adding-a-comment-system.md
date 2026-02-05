@@ -1,3 +1,7 @@
+---
+icon: material/comment-edit-outline
+---
+
 # Adding a comment system
 
 Material for MkDocs allows to easily add the third-party comment system of your

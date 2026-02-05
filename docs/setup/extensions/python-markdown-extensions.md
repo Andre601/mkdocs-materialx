@@ -1,3 +1,7 @@
+---
+icon: octicons/package-dependencies-24
+---
+
 # Python Markdown Extensions
 
 The [Python Markdown Extensions] package is an excellent collection of

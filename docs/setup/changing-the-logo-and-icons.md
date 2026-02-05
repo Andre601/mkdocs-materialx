@@ -1,3 +1,7 @@
+---
+icon: octicons/image-24
+---
+
 # Changing the logo and icons
 
 When installing Material for MkDocs, you immediately get access to _over 8,000

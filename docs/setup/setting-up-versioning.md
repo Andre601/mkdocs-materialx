@@ -1,3 +1,7 @@
+---
+icon: octicons/versions-24
+---
+
 # Setting up versioning
 
 Material for MkDocs makes it easy to deploy multiple versions of your project

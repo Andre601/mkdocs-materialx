@@ -1,6 +1,6 @@
 ---
 title: Built-in info plugin
-icon: material/information
+icon: material/information-outline
 ---
 
 # Built-in info plugin

@@ -33,6 +33,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Configure Git Credentials
         run: |
           git config user.name github-actions[bot]
@@ -65,7 +67,7 @@ jobs:
 
     You can read the [manual page] to learn more about the formatting options of the `date` command.
 
-4.  Some Material for MkDocs plugins use [caching] to speed up repeated
+4.  Some MaterialX for MkDocs plugins use [caching] to speed up repeated
     builds, and store the results in the `~/.cache` directory.
 
 5.  This is the place to install further [MkDocs plugins] or Markdown
@@ -141,7 +143,7 @@ pages:
     - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
 ```
 
-1.  Some Material for MkDocs plugins use [caching] to speed up repeated
+1.  Some MaterialX for MkDocs plugins use [caching] to speed up repeated
     builds, and store the results in the `~/.cache` directory.
 
 Now, when a new commit is pushed to the [default branch] (typically `master` or
@@ -169,7 +171,7 @@ Now you can reach your documentation under `<username>.gitlab.io/<repository>`.
 ## Other
 
 Since we can't cover all possible platforms, we rely on community contributed
-guides that explain how to deploy websites built with Material for MkDocs to
+guides that explain how to deploy websites built with MaterialX for MkDocs to
 other providers:
 
 <div class="mdx-columns" markdown>

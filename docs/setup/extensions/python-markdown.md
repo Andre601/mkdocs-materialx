@@ -1,3 +1,7 @@
+---
+icon: octicons/package-24
+---
+
 # Python Markdown
 
 Material for MkDocs supports a large number of [Python Markdown] extensions,

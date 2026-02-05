@@ -1,3 +1,7 @@
+---
+icon: material/vector-difference-ab
+---
+
 # Why MaterialX
 
 Since `mkdocs-material` has entered maintenance mode with no new features planned, and its alternative `Zensical` remains immature and incompatible with the existing MkDocs plugin ecosystem, this will disrupt the once-thriving ecosystem. For users with stable, fully-featured sites, migrating to Zensical entails high costs and significant stability risks.

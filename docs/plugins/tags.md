@@ -1,6 +1,6 @@
 ---
 title: Built-in tags plugin
-icon: material/tag-text
+icon: material/tag-text-outline
 ---
 
 # Built-in tags plugin

@@ -1,5 +1,5 @@
 ---
-icon: material/view-grid-plus
+icon: material/view-grid-plus-outline
 ---
 
 # Grids

@@ -1,5 +1,6 @@
 ---
 title: Extensions
+icon: material/google-circles-extended
 ---
 
 # Extensions
@@ -116,8 +117,7 @@ markdown_extensions:
   # Python Markdown Extensions
   - pymdownx.arithmatex:
       generic: true
-  - pymdownx.betterem:
-      smart_enable: all
+  - pymdownx.betterem
   - pymdownx.caret
   - pymdownx.details
   - pymdownx.emoji:

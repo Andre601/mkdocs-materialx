@@ -1,5 +1,6 @@
 ---
 status: new
+icon: material/account-clock-outline
 ---
 
 # Add document dates & authors

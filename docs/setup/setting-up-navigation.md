@@ -1,3 +1,7 @@
+---
+icon: material/navigation-variant-outline
+---
+
 # Setting up navigation
 
 A clear and concise navigation structure is an important aspect of good project

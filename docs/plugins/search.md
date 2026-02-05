@@ -1,6 +1,6 @@
 ---
 title: Built-in search plugin
-icon: material/magnify
+icon: octicons/search-24
 ---
 
 # Built-in search plugin
