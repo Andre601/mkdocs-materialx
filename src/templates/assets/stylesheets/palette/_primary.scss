@@ -169,10 +169,10 @@
     }
   }
 
-  // Header
-  .md-header {
-    background-color: hsla(var(--md-hue), 15%, 9%, 1);
-  }
+  // // Header
+  // .md-header {
+  //   background-color: hsla(var(--md-hue), 15%, 9%, 1);
+  // }
 
   // [tablet portrait -]: Layered navigation
   @include break-to-device(tablet portrait) {

@@ -59,8 +59,7 @@ Click on a tile to change the color scheme:
 <!-- md:version 0.2.0 -->
 <!-- md:default `indigo` -->
 
-The primary color is used for the header, the sidebar, text links and several
-other components. In order to change the primary color, set the following value
+The primary color is used for active links in NAV and TOC, text links and several other components. In order to change the primary color, set the following value
 in `mkdocs.yml` to a valid color name:
 
 ``` yaml
