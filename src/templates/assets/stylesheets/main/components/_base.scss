@@ -77,6 +77,15 @@ body {
 
 // ----------------------------------------------------------------------------
 
+// Container with scrollfix
+.md-sidebar__scrollwrap,
+.md-search__scrollwrap {
+  // 阻止滑动穿透，让滑动行为只局限在当前元素内部
+  overscroll-behavior: contain;
+}
+
+// ----------------------------------------------------------------------------
+
 // Grid container - this class is applied to wrapper elements within the
 // header, content area and footer, and makes sure that their width is limited
 // to `1220px`, and they are rendered centered if the screen is larger.

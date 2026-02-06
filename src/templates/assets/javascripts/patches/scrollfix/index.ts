@@ -25,6 +25,7 @@ import {
   filter,
   fromEvent,
   map,
+  merge,
   mergeMap,
   switchMap,
   tap
@@ -44,30 +45,18 @@ interface PatchOptions {
 }
 
 /* ----------------------------------------------------------------------------
- * Helper functions
- * ------------------------------------------------------------------------- */
-
-/**
- * Check whether the given device is an Apple device
- *
- * @returns Test result
- */
-function isAppleDevice(): boolean {
-  return /(iPad|iPhone|iPod)/.test(navigator.userAgent)
-}
-
-/* ----------------------------------------------------------------------------
  * Functions
  * ------------------------------------------------------------------------- */
 
 /**
- * Patch all elements with `data-md-scrollfix` attributes
+ * Patch to prevent scroll leaking (scroll penetration)
  *
- * This is a year-old patch which ensures that overflow scrolling works at the
- * top and bottom of containers on iOS by ensuring a `1px` scroll offset upon
- * the start of a touch event.
+ * This patch ensures that touch-based scrolling within drawer containers (like
+ * navigation and search) doesn't leak to the body when reaching the boundaries.
+ * It also handles locking the background when an overlay is active.
  *
- * @see https://bit.ly/2SCtAOO - Original source
+ * It uses a combination of `overscroll-behavior` (via CSS) and JS event
+ * interception for maximum compatibility and robustness.
  *
  * @param options - Options
  */
@@ -76,25 +65,76 @@ export function patchScrollfix(
 ): void {
   document$
     .pipe(
-      switchMap(() => getElements("[data-md-scrollfix]")),
-      tap(el => el.removeAttribute("data-md-scrollfix")),
-      filter(isAppleDevice),
-      mergeMap(el => fromEvent(el, "touchstart")
-        .pipe(
-          map(() => el)
-        )
-      )
+      switchMap(() => merge(
+        getElements(".md-sidebar--primary"),
+        getElements(".md-sidebar--secondary"),
+        getElements(".md-search"),
+        getElements(".md-overlay")
+      ))
     )
-      .subscribe(el => {
-        const top = el.scrollTop
+    .subscribe(el => {
+      let startY = 0
+      let scrollable: HTMLElement | null = null
+      let isOverlay = false
 
-        /* We're at the top of the container */
-        if (top === 0) {
-          el.scrollTop = 1
+      /* Intercept touch start to record position and prepare context */
+      fromEvent<TouchEvent>(el, "touchstart", { passive: true })
+        .subscribe(ev => {
+          startY = ev.touches[0].pageY
 
-        /* We're at the bottom of the container */
-        } else if (top + el.offsetHeight === el.scrollHeight) {
-          el.scrollTop = top - 1
-        }
-      })
+          /* Cache context to optimize touchmove */
+          isOverlay = el.classList.contains("md-overlay")
+          if (!isOverlay) {
+            scrollable = el.querySelector<HTMLElement>(
+              ".md-sidebar__scrollwrap, .md-search__scrollwrap"
+            )
+          }
+        })
+
+      /* Intercept touch move to prevent leaking */
+      fromEvent<TouchEvent>(el, "touchmove", { passive: false })
+        .subscribe(ev => {
+          const y = ev.touches[0].pageY
+          const delta = startY - y
+
+          /* Case 1: The element is an overlay (background) */
+          if (isOverlay) {
+            if (ev.cancelable)
+              ev.preventDefault()
+            return
+          }
+
+          /* Case 2: The element is a drawer (sidebar or search) */
+          /* If no scrollable container found, block all movement */
+          if (!scrollable) {
+            if (ev.cancelable)
+              ev.preventDefault()
+            return
+          }
+
+          const top = scrollable.scrollTop
+          const height = scrollable.offsetHeight
+          const total = scrollable.scrollHeight
+
+          /* If the content is not scrollable, prevent all movement */
+          if (total <= height) {
+            if (ev.cancelable)
+              ev.preventDefault()
+            return
+          }
+
+          /* Prevent leaking when at the top and pulling down */
+          if (top <= 0 && delta < 0) {
+            if (ev.cancelable)
+              ev.preventDefault()
+
+          /* Prevent leaking when at the bottom and pulling up */
+          } else if (top + height >= total && delta > 0) {
+            if (ev.cancelable)
+              ev.preventDefault()
+          }
+
+          /* Otherwise, allow normal scrolling within the scrollable area */
+        })
+    })
 }
