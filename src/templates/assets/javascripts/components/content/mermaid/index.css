@@ -320,7 +320,7 @@ text.actor > tspan {
 }
 
 /* Sequence actor line */
-line {
+.actor-line {
   stroke: var(--md-mermaid-sequence-actor-line-color);
 }
 
