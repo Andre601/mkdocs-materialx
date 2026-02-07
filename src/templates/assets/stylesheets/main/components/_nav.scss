@@ -93,6 +93,11 @@
     margin-inline: px2rem(4px);
     cursor: pointer;
 
+    // Fix: Disable system long-press highlight and context menu on mobile
+    // to prevent background transparency issues.
+    -webkit-touch-callout: none;
+    user-select: none;
+
     > * + * {
       margin-inline-start: px2rem(8px);
     }
