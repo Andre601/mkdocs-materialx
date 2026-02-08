@@ -22,23 +22,44 @@
 
 <!-- Back-to-top container -->
 <div class="md-top" data-md-component="top" hidden>
-  
-  <!-- Show navigation -->
-  <label class="md-top__button" for="__drawer">
-    {% include ".icons/material/format-list-numbered.svg" %}
-  </label>
+  <div class="md-top__center">
 
-  <!-- Back to top -->
-  <button type="button" class="md-top__button md-top__button--main" data-md-action="top">
-    {% set icon = config.theme.icon.top or "material/arrow-up" %}
-    {% include ".icons/" ~ icon ~ ".svg" %}
-    <span>{{ lang.t("top") }}</span>
-  </button>
+    <!-- Back to top -->
+    <button type="button" class="md-top__button md-top__button--main" data-md-action="top">
+      {% set icon = config.theme.icon.top or "material/arrow-up" %}
+      {% include ".icons/" ~ icon ~ ".svg" %}
+      <span>{{ lang.t("top") }}</span>
+    </button>
 
-  <!-- Show table of contents -->
-  {% if "toc.integrate" not in features %}
-  <label class="md-top__button" for="__toc">
-    {% include ".icons/material/format-list-numbered-rtl.svg" %}
-  </label>
-  {% endif %}
+    <!-- Show navigation -->
+    {% if nav and nav.items %}
+      {% set hidden = "" %}
+      {% if page.meta and page.meta.hide and "navigation" in page.meta.hide %}
+        {% set hidden = "hidden" %}
+      {% endif %}
+      <label
+        class="md-top__button md-top__side md-top__side--nav"
+        for="__drawer"
+        {{ hidden }}
+      >
+        {% include ".icons/material/format-list-numbered.svg" %}
+      </label>
+    {% endif %}
+
+    <!-- Show table of contents -->
+    {% if "toc.integrate" not in features and page.toc %}
+      {% set hidden = "" %}
+      {% if page.meta and page.meta.hide and "toc" in page.meta.hide %}
+        {% set hidden = "hidden" %}
+      {% endif %}
+      <label
+        class="md-top__button md-top__side md-top__side--toc"
+        for="__toc"
+        {{ hidden }}
+      >
+        {% include ".icons/material/format-list-numbered-rtl.svg" %}
+      </label>
+    {% endif %}
+
+  </div>
 </div>

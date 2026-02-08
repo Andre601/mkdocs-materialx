@@ -47,6 +47,13 @@
     transform: translate(50%, 0);
   }
 
+  // Wrapper around centered back-to-top button and side buttons
+  &__center {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+  }
+
   // Back-to-top button is hidden
   &[hidden] {
     pointer-events: none;
@@ -119,23 +126,78 @@
         stroke: currentcolor;
       }
     }
+  }
 
-    // Hide Nav button on desktop
-    &[for="__drawer"] {
-      margin-inline-end: px2rem(30px);
+  // Side buttons attached to centered back-to-top button
+  &__side {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
-      @include break-from-device(screen) {
-        display: none;
+  &__side--nav {
+    left: px2rem(-70px);
+
+    @include break-from-device(screen) {
+      display: none;
+    }
+  }
+
+  &__side--toc {
+    right: px2rem(-70px);
+
+    @include break-from-device(tablet landscape) {
+      display: none;
+    }
+  }
+}
+
+// 在「平板横屏」这个宽度区间生效 （大约 960–1219px）
+@include break-at-device(tablet landscape) {
+  // 只在浏览器支持 :has() 选择器时生效
+  @supports selector(.md-container:has(.md-sidebar)) {
+    // 当右侧有 toc 侧栏时，把 .md-top 位置从「容器中心」调整为「正文中心」，向左挪半个 sidebar 宽度
+    .md-container:has(.md-sidebar.md-sidebar--secondary:not([hidden])) .md-top {
+      margin-inline-start: calc(50% - var(--md-sidebar-primary-width) / 2);
+    }
+
+    [dir="rtl"]
+    .md-container:has(.md-sidebar.md-sidebar--secondary:not([hidden])) .md-top {
+      margin-inline-start: calc(50% + var(--md-sidebar-primary-width) / 2);
+    }
+  }
+}
+
+// 在桌面（screen）一直到更宽的屏幕 ，都应用这个逻辑
+@include break-from-device(screen) {
+  @supports selector(.md-container:has(.md-sidebar)) {
+    .md-container {
+      // 只有左侧 nav 侧栏可见，同时没有可见的 toc 侧栏
+      &:has(.md-sidebar.md-sidebar--primary:not([hidden]))
+        :not(:has(.md-sidebar.md-sidebar--secondary:not([hidden])))
+        .md-top {
+        margin-inline-start: calc(50% + var(--md-sidebar-primary-width) / 2);
+      }
+      // 只有右侧 toc 侧栏可见，同时没有可见的 nav 侧栏
+      &:has(.md-sidebar.md-sidebar--secondary:not([hidden]))
+        :not(:has(.md-sidebar.md-sidebar--primary:not([hidden])))
+        .md-top {
+        margin-inline-start: calc(50% - var(--md-sidebar-primary-width) / 2);
       }
     }
 
-    // Hide TOC button when TOC is visible as sidebar
-    &[for="__toc"] {
-      margin-inline-start: px2rem(30px);
-
-      @include break-from-device(tablet landscape) {
-        display: none;
+    [dir="rtl"] .md-container {
+      &:has(.md-sidebar.md-sidebar--primary:not([hidden]))
+        :not(:has(.md-sidebar.md-sidebar--secondary:not([hidden])))
+        .md-top {
+        margin-inline-start: calc(50% - var(--md-sidebar-primary-width) / 2);
+      }
+      &:has(.md-sidebar.md-sidebar--secondary:not([hidden]))
+        :not(:has(.md-sidebar.md-sidebar--primary:not([hidden])))
+        .md-top {
+        margin-inline-start: calc(50% + var(--md-sidebar-primary-width) / 2);
       }
     }
+
   }
 }
