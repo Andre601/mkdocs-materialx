@@ -149,7 +149,7 @@
   font-weight: 400;
   text-align: initial;
   white-space: normal;
-  vertical-align: text-bottom;
+  vertical-align: middle;
   outline: none;
 
   // Adjust for right-to-left languages
@@ -195,6 +195,8 @@
     // [screen]: Render annotation markers as icons
     @media screen {
       width: 2.2ch;
+      height: 2.2ch;
+      line-height: 2.2ch;
 
       // Annotation is visible
       [data-md-visible] > & {
@@ -204,7 +206,7 @@
       // Annotation marker background
       &::before {
         position: absolute;
-        top: 0;
+        top: 50%;
         z-index: -1;
         width: 2.2ch;
         height: 2.2ch;
@@ -214,6 +216,7 @@
         mask-repeat: no-repeat;
         mask-position: center;
         mask-size: contain;
+        transform: translateY(-54%);
       }
 
       // Annotation marker – the marker must be positioned absolutely behind
@@ -222,7 +225,7 @@
       // alignment of text following an annotation.
       &::after {
         position: absolute;
-        top: 0;
+        top: 50%;
         z-index: -1;
         width: 2.2ch;
         height: 2.2ch;
@@ -236,11 +239,11 @@
           background-color 250ms,
           transform        250ms;
         // Hack: promote to own layer to reduce jitter
-        transform: scale(1.0001);
+        transform: translateY(-54%) scale(1.0001);
 
         // Annotation marker for active tooltip
         .md-tooltip--active + & {
-          transform: rotate(45deg);
+          transform: translateY(-54%) rotate(45deg);
         }
 
         // Annotation marker for active tooltip or on hover
