@@ -310,7 +310,11 @@ export function mountTableOfContents(
       .subscribe(event => {
         const target = event.target as HTMLElement
         if (target.closest(".md-nav__link")) {
-          setToggle("toc", false)
+          if (feature("toc.integrate")) {
+            setToggle("drawer", false)
+          } else {
+            setToggle("toc", false)
+          }
         }
       })
 
