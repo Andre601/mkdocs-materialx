@@ -80,3 +80,9 @@ theme:
 !!! note
 
     The theme name is `materialx`, not material. Everything else is the same as when using material.
+
+Start a live preview server with the following command for automatic open and reload:
+
+```
+mkdocs serve --livereload -o
+```

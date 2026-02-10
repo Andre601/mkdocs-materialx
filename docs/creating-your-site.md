@@ -178,7 +178,7 @@ Point your browser to [localhost:8000][live preview] and you should see:
   [live preview]: http://localhost:8000
   [Creating your site]: assets/screenshots/creating-your-site.png
 
-Alternatively, use the following command for automatic open and reload:
+Alternatively, use the following command for **automatic open and reload**:
 
 ```
 mkdocs serve --livereload -o
