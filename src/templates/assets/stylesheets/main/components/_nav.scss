@@ -209,6 +209,12 @@
       outline-color: var(--md-accent-fg-color);
     }
 
+    // Hide outline and tap highlight for pointer devices
+    &:not(.focus-visible) {
+      outline: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
     // Navigation link for table of contents
     .md-nav--primary &[for="__toc"] {
       display: none;
