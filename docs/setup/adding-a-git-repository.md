@@ -217,14 +217,15 @@ The following configuration options are supported:
 
 <!-- md:option document-dates.exclude -->
 
-:   <!-- md:default none --> This option specifies a list of excluded files:
+:   <!-- md:default none --> This option specifies a list of excluded files, supporting unix shell-style wildcards:
 
     ``` yaml
     plugins:
       - document-dates:
           exclude:
-            - temp.md   # Example: exclude the specified file
-            - blog/*    # Example: exclude all files in blog folder, including subfolders
+            - temp.md       # Example: exclude the specified file
+            - blog/*        # Example: exclude all files in blog folder, including subfolders
+            - '*/index.md'  # Example: exclude all index.md files in any subfolders
     ```
 
 <!-- md:option document-dates.date_format -->

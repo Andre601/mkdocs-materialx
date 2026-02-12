@@ -35,10 +35,11 @@ then configure the switch `recently-updated` in `mkdocs.yml`:
 - document-dates:
     ...
     recently-updated:
-      limit: 10        # Limit the number of docs displayed
-      exclude:         # Exclude documents you don't want to show
-        - index.md
-        - blog/*
+      limit: 10         # Limit the number of docs displayed
+      exclude:          # Exclude documents you don't want to show
+        - index.md          # Example: exclude the specified file
+        - '*/index.md'      # Example: exclude all index.md files in any subfolders
+        - blog/*            # Example: exclude all files in blog folder, including subfolders
 ```
 
 You can also install the plugin [mkdocs-recently-updated-docs] to use alone
@@ -56,7 +57,7 @@ The following configuration options are supported:
 
 <!-- md:option recently-updated.exclude -->
 
-:   <!-- md:default none --> This option specifies the documents to be excluded.
+:   <!-- md:default none --> This option specifies a list of documents to be excluded, supporting unix shell-style wildcards.
 
 ## Add to sidebar navigation
 
