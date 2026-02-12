@@ -57,7 +57,7 @@ The following configuration options are supported:
 
 <!-- md:option recently-updated.exclude -->
 
-:   <!-- md:default none --> This option specifies a list of documents to be excluded, supporting unix shell-style wildcards.
+:   <!-- md:default none --> This option specifies a list of documents to be excluded, supporting unix shell-style wildcards,  such as `*`, `?`, `[]` etc.
 
 ## Add to sidebar navigation
 

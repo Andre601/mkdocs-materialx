@@ -6,6 +6,18 @@ icon: material/layers-triple-outline
 
 ## MaterialX for MkDocs
 
+### 10.0.7 <small>February 12, 2026</small> { id="10.0.7" }
+
+- **Highlights**: Fixed issue where swipe events would wear through on mobile
+- **Highlights**: Adjust the “back to top” container to dynamic positioning, now it will be intelligently centered and auto-hide when not needed
+- Adjust the color of active link from `accent` to `primary`, the primary color is used for active links in NAV and TOC, text links and several other components
+- Adjusted the style of `admonition`
+- Added underline for text link on hover/focus
+- Fixed incorrect actor-line color in `mermaid` sequence
+- Fixed issue where the top container may be blocked by the tabbed
+- Fixed search containers vertical not centered issue
+- Fixed `annotation` button vertical not centered issue
+
 ### 10.0.6 <small>January 28, 2026</small> { id="10.0.6" }
 
 - New: The recently updated document list supports **summary mode** and automatically extracts article summaries, [preview](https://jaywhj.netlify.app/)

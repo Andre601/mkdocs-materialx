@@ -88,7 +88,7 @@ The following configuration options are supported:
 
 <!-- md:option document-dates.exclude -->
 
-:   <!-- md:default none --> This option specifies a list of excluded files, supporting unix shell-style wildcards:
+:   <!-- md:default none --> This option specifies a list of excluded files, supporting unix shell-style wildcards,  such as `*`, `?`, `[]` etc:
 
     ```yaml
     plugins:
