@@ -104,11 +104,13 @@ plugins:
       locale: en
       exclude:
         - index.md
+        - '*/index.md'
         - blog/*
       recently-updated:
         limit: 10
         exclude:
           - index.md
+          - '*/index.md'
           - blog/*
 
   - glightbox
