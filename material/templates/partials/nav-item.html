@@ -127,7 +127,7 @@
             <span class="md-nav__icon md-icon"></span>
             {{ render_title(nav_item) }}
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list">
             {% for item in nav_item.children %}
               {% if not index or item != index %}
                 {{ render(item, path ~ "_" ~ loop.index, level + 1, nav_item) }}

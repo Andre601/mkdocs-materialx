@@ -54,6 +54,11 @@ theme:
 > [!NOTE]
 > The theme name is `materialx`, not material. Everything else is the same as when using material.
 
+Start a live preview server with the following command for automatic open and reload:
+
+```
+mkdocs serve --livereload -o
+```
 <br />
 
 For detailed installation instructions, configuration options, and a demo, visit [jaywhj.github.io/mkdocs-materialx](https://jaywhj.github.io/mkdocs-materialx/)

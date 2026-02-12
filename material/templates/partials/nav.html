@@ -21,7 +21,7 @@
       {% include "partials/source.html" %}
     </div>
   {% endif %}
-  <ul class="md-nav__list" data-md-scrollfix>
+  <ul class="md-nav__list">
     {% for nav_item in nav.items %}
       {% set path = "__nav_" ~ loop.index %}
       {{ item.render(nav_item, path, 1) }}
