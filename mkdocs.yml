@@ -104,6 +104,7 @@ plugins:
       locale: en
       exclude:
         - index.md
+        - license.md
         - '*/index.md'
         - blog/*
 
