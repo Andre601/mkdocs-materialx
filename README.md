@@ -2,7 +2,7 @@
 
 <br />
 
-**MaterialX**, the next generation of mkdocs-material, is based on `mkdocs-material-9.7.1` and is named `X`. It continues to be maintained by individual developers (since mkdocs-material will cease maintenance)
+**MaterialX**, the next generation of mkdocs-material, build beautiful sites the way you already know and love, based on `mkdocs-material-9.7.1` and named `X`, it provides ongoing maintenance and updates. (since mkdocs-material will cease maintenance)
 
 <p align="center">
   <img src="docs/assets/screenshots/recently-updated-en.gif"/>
