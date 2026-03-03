@@ -288,14 +288,13 @@ The following configuration options are supported:
 
 In addition to the above basic configuration, the plug-in also provides a wealth of customization options to meet a variety of individual needs:
 
-- [Specify datetime](adding-document-dates-authors.md#specify-datetime): introduces the mechanism for obtaining document dates and methods for personalized customization, you can manually specify the creation date and last updated date for each document
-- [Specify author](adding-document-dates-authors.md#specify-author): introduces the mechanism for obtaining document authors and methods for personalized customization, you can manually specify the author information for each document, such as name, link, avatar, email, etc.
-- [Specify avatar](adding-document-dates-authors.md#specify-avatar): you can manually specify the avatar for each author, support local file path and URL path
-- [Configuration structure and style](adding-document-dates-authors.md#structure-and-style): you can freely configure the plugin's display structure in mkdocs.yml or Front Matter. You can quickly set the plugin styles through preset entrances, such as icons, themes, colors, fonts, animations, dividing line and so on
-- [Use template variables](adding-document-dates-authors.md#use-template-variables): can be used to optimize `sitemap.xml` for site SEO; can be used to re-customize plug-ins, etc.
-- [Add recent updates module](adding-document-dates-authors.md#add-recent-updates-module): enable list of recently updated documents (in descending order of update date), this is ideal for sites with a large number of documents, so that readers can quickly see what's new
-- [Add localized languages](adding-document-dates-authors.md#add-localized-languages): more localization languages for `timeago` and `tooltip`
-- [Other tips](adding-document-dates-authors.md#other-tips): introducing the Do's of using plugin in Docker
+- [Date & Time](adding-document-dates-authors.md#date-time): Introduces the mechanism for obtaining document dates and methods for personalized customization, support for manually specifying the creation date and last updated date for each document
+- [Author](adding-document-dates-authors.md#author): Introduces the mechanism for obtaining document authors and methods for personalized customization, support for manually specifying the author information for each document, such as name, link, avatar, email, etc.
+- [Avatar](adding-document-dates-authors.md#avatar): You can manually specify the avatar for each author, support local file path and URL path
+- [Structure and Style](adding-document-dates-authors.md#structure-and-style): You can freely configure the plugin's display structure in mkdocs.yml or Front Matter. You can quickly set the plugin styles through preset entrances, such as icons, themes, colors, fonts, animations, dividing line and so on
+- [Template Variables](adding-document-dates-authors.md#template-variables): Can be used to optimize `sitemap.xml` for site SEO
+- [Recently Updated Module](adding-document-dates-authors.md#recently-updated-module): Enable list of recently updated documents (in descending order of update date), this is ideal for sites with a large number of documents, so that readers can quickly see what's new
+- [Localization Language](adding-document-dates-authors.md#localization-language): More localization languages for `timeago` and `tooltip`
 
 For more details: [Document dates & authors](adding-document-dates-authors.md)
 

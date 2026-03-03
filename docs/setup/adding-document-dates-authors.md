@@ -415,7 +415,7 @@ You can quickly set the plugin styles through preset entrances, such as **icons,
 
 You can also refer to the latest example file for free customization: [user.config](https://github.com/jaywhj/mkdocs-document-dates/tree/main/mkdocs_document_dates/static/config)
 
-### Use Template Variables
+### Template Variables
 
 You can use the following variables in the template to access the document's meta-info:
 
@@ -487,11 +487,11 @@ cover: assets/cat.jpg
 ---
 ```
 
-### Add Localization Language
+### Localization Language
 
-The plugin's `tooltip` and `timeago` have built-in multi-language support, and the `locale` is automatically detected, so you don't need to configure it manually. If any language is missing, you can add it for them:
+The plugin's `tooltip` and `timeago` have built-in multi-language support, and the `locale` is automatically detected, so you don't need to configure it manually. If any language is missing, you can add it for them.
 
-**tooltip**
+#### For tooltip
 
 Built-in locales: `en zh zh_TW es fr de ar ja ko ru nl pt`
 
@@ -500,7 +500,7 @@ Addition Method (choose one):
 - In `user.config.js`, refer to [Part 3](https://github.com/jaywhj/mkdocs-document-dates/blob/main/mkdocs_document_dates/static/config/user.config.js) to add it by registering yourself
 - Submit a PR for Inclusion
 
-**timeago**
+#### For timeago
 
 When `type: timeago` is set, the timeago.js library is enabled for dynamic time rendering. The built-in locales in `timeago.min.js` only include `en zh`. If you need to load other languages, you can configure it as described below (choose one):
 
